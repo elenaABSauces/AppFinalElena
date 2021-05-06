@@ -14,6 +14,9 @@ $controladores = [
     "editar" => "controller/cEditar.php",
     "cambiarPassword" => "controller/cCambiarPassword.php",
     "borrarCuenta" => "controller/cBorrarCuenta.php",
+    "mtoDepartamentos" => "controller/cMtoDepartamentos.php",
+    "añadir" => "controller/cAltaDepartamento.php",
+    "bajaLogica" => "controller/cBajaLogicaDepartamento.php",
     "wip" => "controller/cWIP.php"
 ];
 
@@ -26,6 +29,9 @@ $vistas = [
     "editar" => "view/vEditar.php",
     "cambiarPassword" => "view/vCambiarPassword.php",
     "borrarCuenta" => "view/vBorrarCuenta.php",
+    "mtoDepartamentos" => "view/vMtoDepartamentos.php",
+    "añadir" => "view/vAltaDepartamento.php",
+    "bajaLogica" => "view/vBajaLogicaDepartamento.php",
     "wip" => "view/vWIP.php"
 ];
 ?>

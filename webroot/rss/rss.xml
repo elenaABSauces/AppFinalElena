@@ -1,0 +1,26 @@
+<rss version="2.0">
+    <channel>
+        <title><![CDATA[ Elena de Antón ]]></title>
+        <copyright> Elena de Antón Barrio Todos los Derechos Reservados</copyright>
+        <link>http://daw216.ieslossauces.es/AppFinalElena/</link>
+        <description>Aplicacion final DWES Elena de Antón Barrio</description>
+        <language>es</language>
+        <lastBuildDate>Thu, 06 May 2021 22:00:00 GMT</lastBuildDate>
+
+        <item>
+            <title>Funcionalidad de Registro</title>
+            <link> http://daw216.ieslossauces.es/AppFinalElena</link>
+            <description>Nueva funcionalidad de registro</description>
+            <guid>http://daw216.ieslossauces.es/AppFinalElena/registro</guid>
+            <pubDate>Thu, 06 May 2021 21:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Funcionalidad de Login</title>
+            <link> http://daw216.ieslossauces.es/AppFinalElena</link>
+            <description>Nueva funcionalidad de inicio de sesion</description>
+            <guid>http://daw215.ieslossauces.es/AppFinalElena/login</guid>
+            <pubDate>Tue, 04 May 2021 20:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

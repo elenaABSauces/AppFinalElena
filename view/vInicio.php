@@ -17,7 +17,8 @@
         <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <button class="logout" type="submit" name='editar'>Editar Perfil</button>
             <button class="logout" type="submit" name='BorrarCuenta'>Borrar Cuenta</button>
-            <button class="logout" type="submit" name='wip'>Mto.Departamentos</button>
+            <button class="logout" type="submit" name='mtoDepartamentos'>Mto.Departamentos</button>
+             <button class="botonNav" name="wip">Rest</button>
         </form>
 </div>
         <?php echo ($ultimaConexion != null) ? "<p>" . $aLang[$_COOKIE['idioma']]['lastConnection'] . "</p>" : null; ?>

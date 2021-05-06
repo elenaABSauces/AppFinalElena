@@ -1,6 +1,4 @@
-<header>
-    <h1><?php echo $aLang[$_COOKIE['idioma']]['title']; ?></h1>
-</header>
+
 <main>
     
     <form name="singup" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

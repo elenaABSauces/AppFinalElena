@@ -44,6 +44,12 @@ if (isset($_REQUEST['BorrarCuenta'])) {
     exit;
 }
 
+if(isset($_REQUEST['mtoDepartamentos'])){
+    $_SESSION['paginaEnCurso'] = $controladores['mtoDepartamentos']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del work in progress
+    header('Location: index.php');
+    exit;
+}
+
 $oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 
 //Variables que almacenan los datos del usuario sacadas de la BBDD
