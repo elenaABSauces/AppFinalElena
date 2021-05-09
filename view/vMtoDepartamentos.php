@@ -1,13 +1,10 @@
-<nav class="navInicio">
-    <ul class="logoInicio">
-        <li id="logo">CNS</li>
-        <li>Mto Departamentos</li>
-    </ul>
+
+<nav class="navMto">
     <form class="forNavInicio" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <button class="botonNav" name="exportar">Exportar</button>
         <button class="botonNav" name="importar">Importar</button>
-        <button class="botonNav" name="a√±adir">A√±adir</button>
-        <button class="botonNav" name="cerrarSesion">Cerrar Sesi√≥n</button>
+        <button class="botonNav" name="aÒadir">AÒadir</button>
+        <button class="botonNav" name="cerrarSesion">Cerrar Sesion</button>
     </form>
 </nav>
 <main class="mainMtoDepartamentos">

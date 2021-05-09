@@ -1,32 +1,48 @@
 <?php
-$_SESSION['paginaAnterior'] = $controladores['borrarCuenta'];
-//Si se ha pulsado el botón Cancelar
+
+$_SESSION['paginaAnterior'] = $controladores ['borrarCuenta'];
+
 if(isset($_REQUEST['Cancelar'])){
-    //Guardamos en la variable de sesión 'pagina' la ruta del controlador de la edición del usuario
-    $_SESSION['paginaEnCurso'] = $controladores['inicio']; 
+    
+    $_SESSION['paginaEnCurso'] = $controladores['miCuenta']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
     header('Location: index.php');
     exit;
 }
 
 
-//Creación del objeto usuarioActual con los datos almacenados en la sesión
-$oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
-//Variables que almacenan los datos del usuario
-$codUsuario = $oUsuarioActual->getCodUsuario();
-$descUsuario = $oUsuarioActual->getDescUsuario();
-$numConexiones = $oUsuarioActual->getNumConexiones();
+define("OBLIGATORIO", 1); // defino e inicializo la constante a 1 para los campos que son obligatorios
 
-//Si se ha pulsado el botón Aceptar llamamos al método borrarUsuario y le pasamos el código del usuario para que ejecute el DELETE en la BBDD
-if(isset($_REQUEST['Aceptar'])){
-    UsuarioPDO::borrarUsuario($codUsuario);
-    //Borramos los datos de la sesión y redirigimos al login
+$entradaOK = true;
+
+$errorPassword = null;
+
+if(isset($_REQUEST['EliminarCuenta'])){
+    $errorPassword = validacionFormularios::validarPassword($_REQUEST['Password'], 8, 1, 1, OBLIGATORIO);// comprueba que la entrada del password es correcta
+    
+    if($errorPassword!=null){
+        $entradaOK = false;
+    }
+    
+    if($entradaOK){
+        $passwordEncriptada = hash("sha256", ($_SESSION['usuarioDAW216DBProyectoFinal']->codUsuario.$_REQUEST['Password']));
+        if($passwordEncriptada!=$_SESSION['usuarioDAW215AplicacionFinal']->password){
+            $errorPassword = "Password Erronea";
+            $entradaOK = false;
+        }
+    }
+}else{
+    $entradaOK = false;
+}
+
+if($entradaOK){
+    UsuarioPDO::borrarUsuario($_SESSION['usuarioDAW216DBProyectoFinal']->codUsuario);
     session_destroy();
-    header('Location: index.php');
+    
+    header('Location: index.php'); // redirige al index.php
     exit;
+    
 }
 
-//Guardamos en la variable vistaEnCurso la vista que queremos implementar
-$vistaEnCurso = $vistas['borrarCuenta']; 
+$vistaEnCurso = $vistas['borrarCuenta']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 
 require_once $vistas['layout'];
-?> 
