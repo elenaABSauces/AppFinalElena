@@ -5,6 +5,9 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
                <title>Aplicacion Final</title>
             <link rel="stylesheet" href="webroot/css/estilo.css">
+
+            <link rel="icon" type="image/x-icon" href="webroot/images/favicon.ico">
+
         </head>
         <body>
             <nav class="navInicio">
@@ -39,11 +42,14 @@
             <table>
                 <tr>
                     <td><a href="https://www.redhat.com/es" target="_blank">Pagina web imitada</a>
-                        <img src="webroot/media/redhat.png" widht="20" height="20"></td>
+
+                        <img src="webroot/images/redhat.png" widht="20" height="20"></td>
                     
                     <td class="derechos"><a href="../../index.html">Elena de Anton &copy; 2020/21</a> 
-                            <a href="https://github.com/elenaABSauces/AppFinalElena" target="_blank">  
-                            <img src="webroot/media/images/github.png" widht="20" height="20"></a></td>
+                            </td>
+                            <td><a href="https://github.com/elenaABSauces/AppFinalElena" target="_blank">Github</a>  
+                            <img src="webroot/images/github.png" widht="20" height="20"></td>
+
                 </tr>
             </table>
         </form>

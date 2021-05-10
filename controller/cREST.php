@@ -9,10 +9,9 @@ if(isset($_REQUEST['volver'])){ // Si el usuario ha pulsado el boton de volver
     exit;
 }
 
-$apodSelected = "selected"; //marcamos como seleccionado el servicio por defecto (apod)
-$apodDisplay = "block"; //mostramos el servicio por defecto (apod)
 
-if($_REQUEST['fecha']) { //si se ha enviado una fecha
+if(isset($_REQUEST['fecha'])) { //si se ha enviado una fecha
+
         
         $aServicioAPOD = REST::sevicioAPOD($_REQUEST['fecha']); //llamamos al servicio y le pasamos la fecha introducida por el usuario
     }

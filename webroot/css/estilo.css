@@ -149,8 +149,10 @@ main {
 }
 
 #inicioSesion form .enviar {
-  background-color: #red;
-  color: white;
+
+  background-color: red;
+  color: black;
+
   font-size: 15px;
 }
 
@@ -188,8 +190,8 @@ footer table tr td a:hover {
 }
 
 footer table tr .derechos {
-  color: #6B6B6E;
-  font-style: italic;
+
+  color: red;
   font-size: small;
 }
 
