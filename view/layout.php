@@ -43,12 +43,12 @@
                 <tr>
                     <td><a href="https://www.redhat.com/es" target="_blank">Pagina web imitada</a>
 
-                        <img src="webroot/images/redhat.png" widht="20" height="20"></td>
+                        <img src="webroot/media/images/redhat.png" widht="20" height="20"></td>
                     
                     <td class="derechos"><a href="../../index.html">Elena de Anton &copy; 2020/21</a> 
                             </td>
                             <td><a href="https://github.com/elenaABSauces/AppFinalElena" target="_blank">Github</a>  
-                            <img src="webroot/images/github.png" widht="20" height="20"></td>
+                            <img src="webroot/media/images/github.png" widht="20" height="20"></td>
 
                 </tr>
             </table>

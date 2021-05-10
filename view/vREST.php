@@ -17,11 +17,6 @@
                     <a href="https://github.com/nasa/apod-api" target="_blank">Documentacion del servicio</a>
                 </div>
                 <div id="servicio-rest">
-<<<<<<< HEAD
-                <div id="apodService" style="display: <?php echo $apodDisplay ?>">
-=======
-                <div id="apodService" >
->>>>>>> development
                     <h3><?php echo $aServicioAPOD['title'] ?></h3>
                     <img src="<?php echo $aServicioAPOD['url'] ?>" widht="500" height="300">
                     <p><?php echo $aServicioAPOD['explanation'] ?></p>
