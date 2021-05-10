@@ -7,7 +7,7 @@
  * 
  * @author Cristina Nuñez y Javier Nieto
  * @since 1.0
- * @copyright 16-01-2021
+ * @copyright 2020-2021 Cristina Nuñez y Javier Nieto
  * @version 1.0
  */
 class Usuario {
@@ -84,157 +84,29 @@ class Usuario {
         $this->imagenPerfil = $imagenPerfil;
     }
     
+        
     /**
-     * Metodo getCodUsuario()
+     * Metodo mágico __get
      * 
-     * Metodo que devuelve el codigo del usuario
-     * 
-     * @return string codigo del usuario
+     * Metodo que obtiene el valor de un atributo un objeto
+     *
+     * @param  mixed $atributo
+     * @return mixed valor del atributo
      */
-    function getCodUsuario() {
-        return $this->codUsuario;
-    }
-
-    /**
-     * Metodo getPassword()
-     * 
-     * Metodo que devuelve el password del usuario
-     * 
-     * @return string password del usuario
-     */
-    function getPassword() {
-        return $this->password;
-    }
-
-    /**
-     * Metodo getDescUsuario()
-     * 
-     * Metodo que que devuelve la descripcion del usuario
-     * 
-     * @return string descripcion del usuario
-     */
-    function getDescUsuario() {
-        return $this->descUsuario;
-    }
-
-    /**
-     * Metodo getNumConexiones()
-     * 
-     * Metodo que devuelve el numero de conexiones del usuario
-     * 
-     * @return int numero de conexiones del usuario
-     */
-    function getNumConexiones() {
-        return $this->numConexiones;
-    }
-
-    /**
-     * Metodo getFechaHoraUltimaConexion()
-     * 
-     * Metodo que devuelve la fecha y hora de la ultima conexion del usuario en formato timestamp
-     * 
-     * @return int ultima fecha y hora de la ultima conexion en formato timestamp
-     */
-    function getFechaHoraUltimaConexion() {
-        return $this->fechaHoraUltimaConexion;
-    }
-
-    /**
-     * Metodo getPerfil()
-     * 
-     * Metodo que devuelve el tipo de perfil del usuario
-     * 
-     * @return string tipo de perfil del usuario
-     */
-    function getPerfil() {
-        return $this->perfil;
-    }
-
-    /**
-     * Metodo getImagenPerfil()
-     * 
-     * Metodo que devuelve la imagen en formato binario de la base de datos
-     * 
-     * @return string imagen en formato binario
-     */
-    function getImagenPerfil() {
-        return $this->imagenPerfil;
+    function __get($atributo){
+        return $this -> $atributo;
     }
     
     /**
-     * Metodo setCodUsuario()
+     * Metodo magico __set
      * 
-     * Metodo que cambia el valor del atributo $codUsuario
-     * 
-     * @param string $codUsuario nuevo codigo del usuario
+     * Metodo que establece un nuevo valor a un atributo  de un objeto
+     *
+     * @param  mixed $atributo
+     * @param  mixed $nuevoValor
+     * @return void
      */
-    function setCodUsuario($codUsuario) {
-        $this->codUsuario = $codUsuario;
-    }
-
-    /**
-     * Metodo setPassword()
-     * 
-     * Metodo que cambia el valor del atributo $password
-     * 
-     * @param string $password nueva password del usuario
-     */
-    function setPassword($password) {
-        $this->password = $password;
-    }
-
-    /**
-     * Metodo setDescUsuario()
-     * 
-     * Metodo que cambia el valor del atributo $descUsuario
-     * 
-     * @param string $descUsuario nueva descripcion del usuario
-     */
-    function setDescUsuario($descUsuario) {
-        $this->descUsuario = $descUsuario;
-    }
-
-    /**
-     * Metodo setNumConexiones()
-     * 
-     * Metodo que cambia el valor del atributo $numConexiones
-     * 
-     * @param int $numConexiones nuevo numero de conexiones del usuario
-     */
-    function setNumConexiones($numConexiones) {
-        $this->numConexiones = $numConexiones;
-    }
-
-    /**
-     * Metodo setFechaHoraUltimaConexion()
-     * 
-     * Metodo que cambia el valor del atributo $fechaHoraUltimaConexion
-     * 
-     * @param int $fechaHoraUltimaConexion nueva fecha y hora en formato timestamp
-     */
-    function setFechaHoraUltimaConexion($fechaHoraUltimaConexion) {
-        $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
-    }
-
-    /**
-     * Metodo setPerfil()
-     * 
-     * Metodo que cambia el valor del atributo $perfil
-     * 
-     * @param string $perfil nuevo tipo de perfil
-     */
-    function setPerfil($perfil) {
-        $this->perfil = $perfil;
-    }
-
-    /**
-     * Metodo setImagenPerfil()
-     * 
-     * Metodo que cambia el valor del atributo $imagenPerfil
-     * 
-     * @param string $imagenPerfil nueva imagen de perfil en formato binario 
-     */
-    function setImagenPerfil($imagenPerfil) {
-        $this->imagenPerfil = $imagenPerfil;
+    function __set($atributo, $nuevoValor){
+        $this -> $atributo = $nuevoValor;
     }
 }

@@ -28,7 +28,7 @@
  * devuelven una cadena con el mensaje de error. Estas 3 anteriores funciones se emplean en otras 3 funciones que he cambiado, algo más compuestas las cuales son: comprobarAlfabético, 
  * @since 1.2 Se han acabado de formatear los mensajes de error, se han modificado validarURL() y se han añadido validarCp(), validarPassword(), validarRadioB() y validarCheckBox()
  * @since 1.1 Se han formateado los mensajes de error y modificado validarDni()
- * @copyright 21-10-2018
+ * @copyright 2018-2020 DAW2
  * @version 1.6
  * 
  * 

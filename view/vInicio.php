@@ -1,26 +1,15 @@
-<header>
-    <h1>Inicio</h1>
-    <div>
-        <?php echo ($imagenUsuario != null) ? '<img id="fotoPerfil" src = "data:image/png;base64,' . base64_encode($imagenUsuario) . '" alt="Foto de perfil"/>' : "<img id='fotoPerfil' src='webroot/media/imagen_perfil.png' alt='imagen_perfil'/>" ; ?>
-        <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <button class="logout" type="submit" name='detalle'>Detalle</button>
-            <button class="logout" type="submit" name='cerrarSesion'>Cerrar Sesion</button>
-        </form>
-    </div>
 
-</header>
-<main>
-    <article>
-        <h2><?php echo $aLang[$_COOKIE['idioma']]['welcome'] ?> </h2>
-        <h3><?php echo ($numConexiones > 1) ? "Te has conectado " . $numConexiones . " veces.<br>La última conexión fue el " . date('d/m/Y', $ultimaConexionAnterior) . " a las " . date('H:i:s', $ultimaConexionAnterior)  : "Esta es la primera vez que te conectas." ?></h3>
-        <div>
-        <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <button class="logout" type="submit" name='editar'>Editar Perfil</button>
-            <button class="logout" type="submit" name='BorrarCuenta'>Borrar Cuenta</button>
-            <button class="logout" type="submit" name='wip'>Mto.Departamentos</button>
-        </form>
-</div>
-        <?php echo ($ultimaConexion != null) ? "<p>" . $aLang[$_COOKIE['idioma']]['lastConnection'] . "</p>" : null; ?>
-    </article>
+<main class="mainInicio">
+    <div id="imagen">
+        <?php
+            if(isset($oUsuarioActual->imagenPerfil)){
+                echo '<img style="margin-rigth: 2px;" src = "data:image/png;base64,' . base64_encode($oUsuarioActual->imagenPerfil) . '" width = "100px"/>';
+            }
+        ?>
+    </div>
+    <div id="inicio">
+        <h1>Bienvenido/a <?php echo $oUsuarioActual->descUsuario?></h1>
+        <p><?php echo ($oUsuarioActual->numConexiones > 1) ? "Esta es la ".$oUsuarioActual->numConexiones." vez que se conecta" : "Es la primera vez que se conecta" ?></p>
+        <p><?php echo isset($ultimaConexion) ? "Se conecto por ultima vez el ".date('d/m/Y',$ultimaConexion)." a las ".date('H:i:s',$ultimaConexion) : null; ?> </p>
+    </div>
 </main>
-</body>
