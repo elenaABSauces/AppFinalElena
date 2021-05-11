@@ -1,15 +1,20 @@
 <?php
-    if(!isset($_SESSION['usuarioDAWAplicacionFinal'])){                // Si el usuario no se ha logueado
-        header('Location: index.php');                                          //Recargamos el index
-        exit;
-    }
+$_SESSION['paginaAnterior'] = $controladores['detalle'];
+//Si no hay una sesión iniciada te manda al Login
+if(!isset($_SESSION['usuarioDAWAplicacionFinal'])){ 
+    header('Location: index.php');
+    exit;
+}
+//Si se ha pulsado Cancelar
+if (isset($_REQUEST['volver'])) {
+    //Guardamos en la variable de sesión 'pagina' la ruta del controlador del login
+    $_SESSION['paginaEnCurso'] = $controladores['inicio'];
+    header('Location: index.php');
+    exit;
+}
 
-    if(isset($_REQUEST['volver'])){                                             //Si el usuario pulsa el boton de volver
-        $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];               //Cargamos PaginaAnterior de inicio en PaginaenCurso
-        header('Location: index.php');                                          //Redirigimos al usuario al programa de nuevo
-        exit;
-    }
-  
-    $vistaEnCurso = $vistas['detalle'];                                         //Cargamos la vista de detalles
-    require_once $vistas['layout'];                                             //Cargamos el layout
+//Guardamos en la variable vistaEnCurso la vista que queremos implementar
+$vistaEnCurso = $vistas['detalle']; 
+
+require_once $vistas['layout'];                                            //Cargamos el layout
 ?>

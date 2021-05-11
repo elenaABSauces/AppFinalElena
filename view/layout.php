@@ -5,8 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
                <title>Aplicacion Final</title>
             <link rel="stylesheet" href="webroot/css/estilo.css">
-
-            <link rel="icon" type="image/x-icon" href="webroot/images/favicon.ico">
+            <link rel="icon" type="image/x-icon" href="webroot/media/images/favicon.ico">
 
         </head>
         <body>
@@ -19,16 +18,16 @@
                     <?php 
                         if(isset($_SESSION['usuarioDAW216DBProyectoFinal'])){
                     ?>
-                     <button class="botonNav" name="rest">Rest</button>
-                     <button class="botonNav" name="wip">Mto Departamentos</button>
-                     <button class="botonNav" name="editarPerfil">Editar Perfil</button>
-                     <button class="botonNav" name="cerrarSesion">Cerrar Sesion</button>
+                     
+                     <button class="logout" type="submit" name="wip">Mto Departamentos</button>
+                     <button class="logout" type="submit" name="editarPerfil">Editar Perfil</button>
+                     <button class="logout" type="submit" name='detalle'>Detalle</button>
+                     <button class="logout" type="submit" name="rest">Rest</button>
+                     <button class="logout" type="submit" name="cerrarSesion">Cerrar Sesion</button>
                     <?php 
                     }else{
                     ?>
-                    <button class="botonNav" name="inicioSesion">Iniciar Sesion</button>
-                    <button class="botonNav" name="rest">Rest</button>
-                           
+                    <button class="logout" type="submit" name="inicioSesion">Iniciar Sesion</button>
                     <?php 
                     }
                     ?>

@@ -2,9 +2,8 @@
     <div id="inicio">
         <h1>Rest</h1>
            <div id="formulario-rest">
-                    <h2>APOD: Astronomy Picture of the Day</h2>
-              
                 <div id="inasa">
+                    <p>APOD: Astronomy Picture of the Day</p>
                     <form name="nasa" id="nasa" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <p>
                             <label for="fecha">Elige una fecha para ver la imagen:</label>
@@ -13,13 +12,14 @@
                         <div class="botones">
                             <input type="submit" value="Buscar" name="enviar">
                         </div>
-                    </form>
-                    
-                    <h3><?php echo $aServicioAPOD['title'] ?></h3>
+                    </form>   
+                    <p><?php echo $aServicioAPOD['title'] ?></p>
                     <img src="<?php echo $aServicioAPOD['url'] ?>" widht="500" height="300"/>
                     <p><?php echo $aServicioAPOD['explanation'] ?></p>
                     <a href="https://github.com/nasa/apod-api" target="_blank">Documentacion del servicio Imagen Nasa</a>
                 </div>
+                    <br>
+                    <br>
                     <div id="elefante">
                         <form name="elefante" id="elefante" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                             <label for="sexo">Seleciona un sexo: </label>

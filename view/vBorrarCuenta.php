@@ -1,6 +1,6 @@
 <main class="mainEliminarCuenta">
     <div id="eliminarCuenta">
-        <form name="formularioEliminarCuenta" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="formularioAlta">
+        <form name="formularioEliminarCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="formularioAlta">
             <h3>Eliminar Cuenta</h3>
             <br>
             <div>
@@ -18,4 +18,8 @@
             </div>
         </form>
     </div>
+    <br><!-- comment -->
+    <form  name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <button type="submit" name='volver' value="volver" class="volver">VOLVER</button>
+    </form>
 </main>
