@@ -27,6 +27,7 @@
                     }else{
                     ?>
                     <button class="botonNav" name="inicioSesion">Iniciar Sesion</button>
+                    <button class="botonNav" name="rest">Rest</button>
                            
                     <?php 
                     }

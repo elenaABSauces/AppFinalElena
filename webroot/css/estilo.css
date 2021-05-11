@@ -168,6 +168,8 @@ main {
 footer {
   background-color: black;
   height: 10vh;
+  position:fixed;
+  bottom:0;
 }
 
 footer table {

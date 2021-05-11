@@ -20,6 +20,14 @@ if(isset($_REQUEST['fecha'])) { //si se ha enviado una fecha
         $aServicioAPOD = REST::sevicioAPOD(date('Y-m-d'));
     }
     
+    if(isset($_REQUEST['sexo'])) { //si se ha enviado el sexo
+
+        $aElefante = REST::getElephant($_REQUEST['sexo']);//llamamos al servicio y le pasamos la fecha introducida por el usuario
+        
+    }else{
+        $aElefante = REST::getElephant('female');
+    }
+    
   
    
 

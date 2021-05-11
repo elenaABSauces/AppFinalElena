@@ -21,6 +21,6 @@
 ?>
 
 
-<main 
+<main> 
 
 </main>
