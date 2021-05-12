@@ -18,7 +18,7 @@
                     <?php 
                         if(isset($_SESSION['usuarioDAW216DBProyectoFinal'])){
                     ?>
-                     
+                     <button class="logout" type="submit" name='Volver'>Volver</button>
                      <button class="logout" type="submit" name="wip">Mto Departamentos</button>
                      <button class="logout" type="submit" name="editarPerfil">Editar Perfil</button>
                      <input class="botones" type="submit" value="Detalles" name="detalle" id="detalle">

@@ -23,7 +23,7 @@ if(isset($_REQUEST['EliminarCuenta'])){
     
     if($entradaOK){
         $passwordEncriptada = hash("sha256", ($_SESSION['usuarioDAW216DBProyectoFinal']->codUsuario.$_REQUEST['Password']));
-        if($passwordEncriptada!=$_SESSION['usuarioDAW215AplicacionFinal']->password){
+        if($passwordEncriptada!=$_SESSION['usuarioDAW216AplicacionFinal']->password){
             $errorPassword = "Password Erronea";
             $entradaOK = false;
         }

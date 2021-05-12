@@ -3,7 +3,7 @@
     <form class="forNavInicio" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <button class="botonNav" name="exportar">Exportar</button>
         <button class="botonNav" name="importar">Importar</button>
-        <button class="botonNav" name="añadir">Añadir</button>
+        <button class="botonNav" name="aÃ±adir">AÃ±adir</button>
         <button class="botonNav" name="cerrarSesion">Cerrar Sesion</button>
     </form>
 </nav>

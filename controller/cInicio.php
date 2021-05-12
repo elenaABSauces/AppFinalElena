@@ -30,6 +30,22 @@ if (isset($_REQUEST['detalle'])) {
     exit;
 }
 
+//Si se ha pulsado el botón de Cerrar Sesión
+if (isset($_REQUEST['cerrarSesion'])) {
+    //Destruye todos los datos asociados a la sesión
+    session_destroy();
+    //Redirige al login.php
+    header("Location: index.php"); 
+    exit;
+}
+
+if (isset($_REQUEST['volver'])) {
+    //Guardamos en la variable de sesión 'pagina' la ruta del controlador del login
+    $_SESSION['paginaEnCurso'] = $controladores['inicio'];
+    header('Location: index.php');
+    exit;
+}
+
 if(isset($_REQUEST['rest'])){
     $_SESSION['paginaEnCurso'] = $controladores['rest']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del rest
     header('Location: index.php');

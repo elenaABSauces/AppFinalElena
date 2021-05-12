@@ -33,5 +33,4 @@ $vistaEnCurso = $vistas['rest']; // guardamos en la variable vistaEnCurso la vis
 require_once $vistas['layout']; // cargamos el layout
 
 ?>
-
     

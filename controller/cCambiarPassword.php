@@ -8,11 +8,6 @@ if(isset($_REQUEST['Cancelar'])){
     exit;
 }
 
-if(isset($_REQUEST['Tecnologias'])){ //  Si el usuario ha pulsado el boton Tecnoologias
-    $_SESSION['paginaEnCurso'] = $controladores['tecnologias']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del registro
-    header('Location: index.php');
-    exit;
-}
 
 define("OBLIGATORIO", 1);
 $entradaOK = true;
