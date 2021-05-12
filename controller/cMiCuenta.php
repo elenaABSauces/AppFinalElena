@@ -1,13 +1,10 @@
 <?php
-
-$_SESSION['paginaAnterior'] = $controladores['miCuenta'];
-
-if(isset($_REQUEST['Cancelar'])){
-    $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
+if(isset($_REQUEST['cancelar'])) {                                             // si se ha pulsado el boton de cancelar
+    $_SESSION['paginaAnterior'] = $controladores['inicio'];                     //??????????????????????????? Si no no me funciona
+    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];                   //Cargamos PaginaAnterior de inicio en PaginaenCurso
     header('Location: index.php');
     exit;
 }
-
 if(isset($_REQUEST['CambiarPassword'])){
     $_SESSION['paginaEnCurso'] = $controladores['cambiarPassword']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
     header('Location: index.php');
@@ -56,7 +53,7 @@ if(isset($_REQUEST['Aceptar'])){
 }
 if($entradaOK){
     $_SESSION['usuarioDDAW216DBProyectoFinal']=UsuarioPDO::modificarUsuario($oUsuarioActual->codUsuario, $_REQUEST['DescUsuario'], $imagenSubida);
-    $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del inicios
+    $_SESSION['paginaEnCurso'] = $controladores['paginaAnterior']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del inicios
     header('Location: index.php');
     exit;
 }

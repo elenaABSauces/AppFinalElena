@@ -1,47 +1,61 @@
-<main class="mainEditarPerfil">
-    <div id="editarPerfil">
-        <form name="formulario" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="form" enctype="multipart/form-data">
-            <h3>Editar Perfil</h3>
-            <br>
-            <h4>Campos bloqueados (*)</h4>
-            <br>
-            <div>
-                <label for="CodUsuario">Usuario (*)</label><br>
-                <input class="campos" type="text" id="CodUsuario" name="CodUsuario" readonly value="<?php echo $_SESSION['usuarioDAW215AplicacionFinal']->codUsuario; ?>">
-                <br><br>
-
-                <label for="DescUsuario" >Descripción del usuario</label><br>
-                <input class="campos" type="text" id="DescUsuario" name="DescUsuario" value="<?php echo $_SESSION['usuarioDAW215AplicacionFinal']->descUsuario; ?>">
+<div id="imagenPerfil">
+    <?php
+        if($imagenUsuario==null){                                       //Si la imagende usuario en la tabla esta vacia le digo que me ponga una por defecto
+            echo '<img class="imgpreview" id="preview" src = "./webroot/images/user.svg' . base64_encode($imagenUsuario) . '" width = "120px" height="120px"/>';
+        }else{
+            echo '<img class="imgpreview" id="preview" src = "data:image/png;base64,' . base64_encode($imagenUsuario) . '" width = "120px" height="120px"/>'; 
+        }
+    ?>
+<div>
+      <h3>Editar perfil</h3>
+        <div>
+              
+            <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post"  enctype="multipart/form-data">        
+                
+                <div>   
+                    <label>Usuario 🔒</label>	
+                    <input  type="text" name="CodUsuario" value="<?php echo $codUsuario; ?>" style="background: #D3CAC4;" readonly>
+                    <br><br>
+                </div>
+                
+                <div>           
+                    <label>Descripción del usuario</label>   
+                    <input type="text" name="DescUsuario" value="<?php echo $descUsuario; ?>">
+                     <?php echo ($aErrores['DescUsuario']!=null) ? "<span class='error'>".$aErrores['DescUsuario']."</span>" : null; ?>     
+                    <br><br>
+                </div>
+                
+                <div>   
+                    <label>Numero de conexiones 🔒</label>	
+                        <input type="text" name="NumConexiones" value="<?php echo $numConexiones; ?>" style="background: #D3CAC4;" readonly>
+                    <br><br>
+                </div>   
                 <?php
-                    echo $errorDescripcion!=null ? "<span style='color:#FF0000'>".$errorDescripcion."</span>" : null;// si el campo es erroneo se muestra un mensaje de error
+                    if($numConexiones>1){
                 ?>
-                <br><br>
-
-                <label for="NumConexiones">Número de conexiones (*)</label><br>
-                <input class="campos" type="text" id="NumConexiones" name="NumConexiones" readonly value="<?php echo $_SESSION['usuarioDAW215AplicacionFinal']->numConexiones; ?>">
-                <br><br>
-
-                <label for="FechaHoraUltimaConexion">Fecha Hora Última Conexión (*)</label><br>
-                <input class="campos" type="text" id="FechaHoraUltimaConexion" name="FechaHoraUltimaConexion" readonly value="<?php echo (date('d/m/Y H:i:s',$_SESSION['usuarioDAW215AplicacionFinal']->fechaHoraUltimaConexion)); ?>">
-                <br><br>
-
-                <label for="imagen">Imagen</label><br>
-                <input class="campos" type="file" id="imagen" name="imagen">
+                    <div>   
+                        <label>Ultima fecha de conexion 🔒</label>	
+                            <input type="text" name="FechaHoraUltimaConexion" value="<?php echo (date('d/m/Y H:i:s')); ?>" style="background: #D3CAC4;" readonly>
+                    <br><br>
+                    </div> 
                 <?php
-                    echo $errorImagen!=null ? "<span style='color:#FF0000'>".$errorImagen."</span>" : null;// si el campo es erroneo se muestra un mensaje de error
+                    }
                 ?>
-                <br><br>
+                <div class="imagen">           
+                    <label for="imagen">Imagen de perfil</label>   
+                    <input type="file" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])" id="imagen" name="imagen">
+                    <?php echo ($aErrores['ImagenUsuario']!=null) ? "<span class='error'>".$aErrores['ImagenUsuario']."</span>" : null; ?>
+                    <br><br>
+                </div>
+                
+                    <input type="submit"  value="CAMBIAR CONTRASEÑA" name="cambiarPassword" class="contraseña">
+                    <br>
+                <div>
+                    <input type="submit" value="Aceptar" name="aceptar" class="aceptar">
+                    <input type="submit" value="Cancelar" name="cancelar" class="cancelar">
+                </div>
 
-                <input class="cambiarPassword" type="submit" value="CambiarPassword" name="CambiarPassword">
-                <br>
-                <input class="eliminarCuenta" type="submit" value="EliminarCuenta" name="EliminarCuenta">
-                <br><br>
-            </div>
-            <div>
-                <input class="enviar" type="submit" value="Aceptar" name="Aceptar">
-                <br>
-                <input class="enviar" type="submit" value="Cancelar" name="Cancelar">
-            </div>
-        </form>
-    </div>
-</main>
+               
+
+            </form>
+</div>

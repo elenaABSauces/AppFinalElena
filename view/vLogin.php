@@ -5,11 +5,11 @@
             <br>
             <div>
                 <label for="CodUsuario">Usuario</label>
-                <input class="campos" type="text" id="CodUsuario" name="CodUsuario" value="">
+                 <input type="text" name="CodUsuario" value="<?php if($aErrores['CodUsuario'] == NULL && isset($_REQUEST['CodUsuario'])){ echo $_REQUEST['CodUsuario'];}?>">
                 <br><br>
 
                 <label for="Password">Contraseña</label>
-                <input class="campos" type="password" id="Password" name="Password" value="">
+                <input type = "Password"  name = "Password" value="<?php if($aErrores['Password'] == NULL && isset($_REQUEST['Password'])){ echo $_REQUEST['Password'];}?>">
                 <br><br>
             </div>
             <div>

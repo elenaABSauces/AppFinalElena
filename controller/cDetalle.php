@@ -1,7 +1,5 @@
 <?php
-$_SESSION['paginaAnterior'] = $controladores['detalle'];
-//Si no hay una sesión iniciada te manda al Login
-if(!isset($_SESSION['usuarioDAWAplicacionFinal'])){ 
+if(!isset($_SESSION['usuarioDAW216AplicacionFinal'])){ 
     header('Location: index.php');
     exit;
 }

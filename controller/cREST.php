@@ -1,7 +1,8 @@
 <?php
-$_SESSION['paginaAnterior'] = $controladores ['rest'];
-
-error_reporting(0);
+if(!isset($_SESSION['usuarioDAW216DBProyectoFinal'])){                // Si el usuario no se ha logueado
+        header('Location: index.php');                                          //Recargamos el index
+        exit;
+    }
 
 if(isset($_REQUEST['volver'])){ // Si el usuario ha pulsado el boton de volver
     $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion paginaEnCurso la ruta del controlador del inicio
@@ -28,10 +29,6 @@ if(isset($_REQUEST['fecha'])) { //si se ha enviado una fecha
         $aElefante = REST::getElephant('female');
     }
     
-  
-   
-
-error_reporting(-1);
 $vistaEnCurso = $vistas['rest']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 require_once $vistas['layout']; // cargamos el layout
 

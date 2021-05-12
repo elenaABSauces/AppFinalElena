@@ -5,11 +5,6 @@ require_once 'config/configDB.php';
 
 
 session_start(); // Iniciamos una sesion o recuperamos la sesion anterior
-if (isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el boton de Cerrar Sesion
-    session_destroy(); // destruye todos los datos asociados a la sesion
-    header("Location: index.php"); // redirige al login
-    exit;
-}
 
 if(isset($_SESSION['usuarioDAW216DBProyectoFinal'])){ // Si el usuario ha iniciado sesion
     require_once $_SESSION['paginaEnCurso']; // Incluimos el controlador la pagina en curso

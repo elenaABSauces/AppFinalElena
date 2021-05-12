@@ -3,7 +3,7 @@
     <div id="imagen">
         <?php
             if(isset($oUsuarioActual->imagenPerfil)){
-                echo '<img style="margin-rigth: 2px;" src = "data:image/png;base64,' . base64_encode($oUsuarioActual->imagenPerfil) . '" width = "100px"/>';
+                echo '<img style="margin-rigth: 2px;" src = "data:image/png;base64,' . base64_encode($oUsuarioActual->imagenPerfil) . '" width = "20px"/>';
             }
         ?>
     </div>

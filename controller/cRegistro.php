@@ -1,7 +1,4 @@
 <?php
-
-$_SESSION['paginaAnterior'] = $controladores ['registro'];
-
 if(isset($_REQUEST['Cancelar'])){
     $_SESSION['paginaEnCursoSinRegistro'] = $controladores['login'];
     header('Location: index.php');

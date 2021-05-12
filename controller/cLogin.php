@@ -1,7 +1,4 @@
 <?php
-
-$_SESSION['paginaAnterior'] = $controladores ['login'];
-
 if(isset($_REQUEST['Volver'])){
     $_SESSION['paginaEnCursoSinRegistro'] = $controladores['principal']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del registro
     header('Location: index.php');

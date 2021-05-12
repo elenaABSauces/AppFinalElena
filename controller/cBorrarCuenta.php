@@ -1,7 +1,5 @@
 <?php
 
-$_SESSION['paginaAnterior'] = $controladores ['borrarCuenta'];
-
 if(isset($_REQUEST['Cancelar'])){
     
     $_SESSION['paginaEnCurso'] = $controladores['miCuenta']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
