@@ -1,5 +1,6 @@
 <?php
-if(!isset($_SESSION['usuarioDAW216DBProyectoFinal'])){ 
+$_SESSION['paginaAnterior'] = $controladores['detalle']; // se guarda la ruta del controlador actual en la variable de sesion 'paginaEncurso' 
+if(!isset($_SESSION['usuarioDAW216DBProyectoFinal'])){ //Si no hay una sesión iniciada te manda al Login
     header('Location: index.php');
     exit;
 }
@@ -12,36 +13,10 @@ if (isset($_REQUEST['cerrarSesion'])) {
     exit;
 }
 
-if(isset($_REQUEST['editarPerfil'])){
-    $_SESSION['paginaEnCurso'] = $controladores['miCuenta']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del work in progress
-    header('Location: index.php');
-    exit;
-}
-
-if(isset($_REQUEST['mtoDepartamentos'])){
-    $_SESSION['paginaEnCurso'] = $controladores['mtoDepartamentos']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del work in progress
-    header('Location: index.php');
-    exit;
-}
-
-//Si se ha pulsado el botón de detalle
-if (isset($_REQUEST['detalle'])) {
-    //Guardamos en la variable de sesión 'pagina' la ruta del controlador del registro
-    $_SESSION['paginaEnCurso'] = $controladores['detalle']; 
-    header('Location: index.php');
-    exit;
-}
-
-
+//Si se ha pulsado volver
 if (isset($_REQUEST['volver'])) {
     //Guardamos en la variable de sesión 'pagina' la ruta del controlador del login
     $_SESSION['paginaEnCurso'] = $controladores['inicio'];
-    header('Location: index.php');
-    exit;
-}
-
-if(isset($_REQUEST['rest'])){
-    $_SESSION['paginaEnCurso'] = $controladores['rest']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del rest
     header('Location: index.php');
     exit;
 }
@@ -50,4 +25,5 @@ if(isset($_REQUEST['rest'])){
 $vistaEnCurso = $vistas['detalle']; 
 
 require_once $vistas['layout'];                                            //Cargamos el layout
+?>                                            //Cargamos el layout
 ?>

@@ -1,7 +1,15 @@
 <?php
+$oUsuarioActual = $_SESSION['usuarioDAW216AplicacionFinal']; // almacenamos en la variable el usuario actual
+
 if(isset($_REQUEST['cancelar'])) {                                             // si se ha pulsado el boton de cancelar
     $_SESSION['paginaAnterior'] = $controladores['inicio'];                     //??????????????????????????? Si no no me funciona
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];                   //Cargamos PaginaAnterior de inicio en PaginaenCurso
+    header('Location: index.php');
+    exit;
+}
+
+if (isset($_REQUEST["Volver"])) {
+    $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
     header('Location: index.php');
     exit;
 }

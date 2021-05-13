@@ -1,5 +1,5 @@
 <?php
-$_SESSION['paginaAnterior'] = $controladores['inicio'];
+$_SESSION['paginaAnterior'] = $controladores['inicio']; // se guarda la ruta del controlador actual en la variable de sesion 'paginaEncurso' 
     if(!isset($_SESSION['usuarioDAW216DBProyectoFinal'])){                //Si el usuario no se ha logeado
         header('Location: index.php');                                          //Recarga el index
         exit;
@@ -51,14 +51,20 @@ if(isset($_REQUEST['rest'])){
     header('Location: index.php');
     exit;
 }
-
-$oUsuarioActual = $_SESSION['usuarioDAW216DBProyectoFinal'];
-
-if(isset($_SESSION['fechaHoraUltimaConexionAnterior'])){
-    $ultimaConexion = $_SESSION['fechaHoraUltimaConexionAnterior']; // variable que tiene la ultima hora de conexion del usuario
+if(isset($_REQUEST['wip'])){
+    $_SESSION['paginaEnCurso'] = $controladores['wip']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del rest
+    header('Location: index.php');
+    exit;
 }
 
-$vistaEnCurso = $vistas['inicio']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
-require_once $vistas['layout']; // incluimos la vista del layout
+//Variables que almacenan los datos del usuario sacadas de la BBDD
+$numConexiones = $oUsuarioActual->getNumConexiones();
+$descUsuario = $oUsuarioActual->getDescUsuario();
+$ultimaConexionAnterior = $_SESSION['fechaHoraUltimaConexionAnterior'];
+$imagenUsuario = $oUsuarioActual->getImagenPerfil();
+
+//Guardamos en la variable vistaEnCurso la vista que queremos implementar
+$vistaEnCurso = $vistas['inicio']; 
+require_once $vistas['layout'];
 
 ?>

@@ -1,4 +1,7 @@
 <div>
+    <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <button type="submit" name='volver'>Volver</button>
+    </form>
    <h3 class="h3detalle">$_COOKIE</h3>
         <div>  
         <?php foreach ($_COOKIE as $parm => $value)  echo "<b>$parm </b> → '$value'<br>"; ?>

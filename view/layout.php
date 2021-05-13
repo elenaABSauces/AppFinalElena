@@ -18,12 +18,12 @@
                     <?php 
                         if(isset($_SESSION['usuarioDAW216DBProyectoFinal'])){
                     ?>
-                     <button class="logout" type="submit" name='Volver'>Volver</button>
-                     <button class="logout" type="submit" name="wip">Mto Departamentos</button>
-                     <button class="logout" type="submit" name="editarPerfil">Editar Perfil</button>
-                     <input class="botones" type="submit" value="Detalles" name="detalle" id="detalle">
-                     <button class="logout" type="submit" name="rest">Rest</button>
-                     <button class="logout" type="submit" name="cerrarSesion">Cerrar Sesion</button>
+                     
+                     <button class="botones" type="submit" name="wip">Mto Departamentos</button>
+                     <button class="botones" type="submit" name="editarPerfil">Editar Perfil</button>
+                     <input class="botones" type="submit" value="detalles" name="detalle" id="detalle">
+                     <button class="botones" type="submit" name="rest">Rest</button>
+                     <button class="botones" type="submit" name="cerrarSesion">Cerrar Sesion</button>
                     <?php 
                     }else{
                     ?>

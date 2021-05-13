@@ -21,6 +21,7 @@ $controladores = [
     "detalle" => "controller/cDetalle.php",
     "cambiarPassword" => "controller/cCambiarPassword.php",
     "mtoDepartamentos" => "controller/cMtoDepartamentos.php"
+
 ];
 
 $vistas = [
@@ -36,6 +37,7 @@ $vistas = [
     "detalle" => "view/vDetalle.php",
     "cambiarPassword" => "view/vCambiarPassword.php",
     "mtoDepartamentos" => "view/vMtoDepartamentos.php"
+
     
 ];
 ?>
