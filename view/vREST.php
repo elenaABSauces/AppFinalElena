@@ -12,15 +12,27 @@
                         <div class="botones">
                             <input type="submit" value="Buscar" name="enviar">
                         </div>
-                    </form>   
-                    <p><?php echo $aServicioAPOD['title'] ?></p>
-                    <img src="<?php echo $aServicioAPOD['url'] ?>" widht="500" height="300"/>
-                    <p><?php echo $aServicioAPOD['explanation'] ?></p>
+                    </form>
+                    <?php
+                            if(isset($aServicioAPOD["correcto"])){
+                                
+                                ?>
+                    <p><?php echo $aServicioAPOD["correcto"]['title'] ?></p>
+                    <img src="<?php echo $aServicioAPOD["correcto"]['url'] ?>" widht="500" height="300"/>
+                    <p><?php echo $aServicioAPOD["correcto"]['explanation'] ?></p>
+                    <?php
+                            }else{
+                                ?>
+                            <p>Error: <?php $aServicioAPOD["incorrecto"]?></p>
+                            <?php
+                            }
+                                ?>
                     <a href="https://github.com/nasa/apod-api" target="_blank">Documentacion del servicio Imagen Nasa</a>
                 </div>
                     <br>
                     <br>
                     <div id="elefante">
+                        <p>Descubre los Elefantes</p>
                         <form name="elefante" id="elefante" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                             <label for="sexo">Seleciona un sexo: </label>
                             <select id="sexo" name="sexo">
@@ -32,12 +44,24 @@
                             </div>
                         </form><!-- -->
                         <div>
-                            <img src="<?php echo $aElefante["image"]?>" widht="500" height="300"/>
-                            <p>Nombre: <?php echo $aElefante["name"]?></p>
-                            <p>Fecha Nacimiento: <?php echo $aElefante["dob"]?></p>
-                            <p>Especie: <?php echo $aElefante["species"]?></p>
-                            <p><a href="<?php echo $aElefante["wikilink"]?>" target="_blank">Link con más informacion:</a><p>
-                            <p>Información: <?php echo $aElefante["note"]?></p><!-- comment --><!-- comment -->
+                            <?php
+                            if(isset($aElefante["correcto"])){
+                                
+                                ?>
+                            <img src="<?php echo $aElefante["correcto"]["image"]?>" widht="500" height="300"/>
+                            <p>Nombre: <?php echo $aElefante["correcto"]["name"]?></p>
+                            <p>Fecha Nacimiento: <?php echo $aElefante["correcto"]["dob"]?></p>
+                            <p>Especie: <?php echo $aElefante["correcto"]["species"]?></p>
+                            <p><a href="<?php echo $aElefante["correcto"]["wikilink"]?>" target="_blank">Link con más informacion:</a><p>
+                            <p>Información: <?php echo $aElefante["correcto"]["note"]?></p><!-- comment --><!-- comment -->
+                            <?php
+                            }else{
+                                ?>
+                            <p>Error: <?php $aElefante["incorrecto"]?></p>
+                            <?php
+                            }
+                                ?>
+                            
                         </div>
                         <a href="https://elephant-api.herokuapp.com/" target="_blank">Documentación del servicio Elefante</a>
                     </div>

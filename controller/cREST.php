@@ -29,6 +29,10 @@ if(isset($_REQUEST['fecha'])) { //si se ha enviado una fecha
         $aElefante = REST::getElephant('female');
     }
     
+    
+    
+    
+    
 $vistaEnCurso = $vistas['rest']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 require_once $vistas['layout']; // cargamos el layout
 

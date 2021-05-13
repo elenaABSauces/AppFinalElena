@@ -3,7 +3,12 @@
 class REST{    
     
      public static function sevicioAPOD($fecha) {    
-        try{
+        $aRespuestas=[ //creamos un array con posición para guardar respuesta de Datos o respuesta de exception
+            "correcto" => null,
+            "incorrecto" => null
+        ];
+        $aRespuesta["correcto"]= $aDatos;
+         try{
             $resultado = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=$fecha", true); // obtenemos el resultado del servidor del api rest
             
             if($resultado == false){ // si no obtenemos el resultado esperado
@@ -11,15 +16,21 @@ class REST{
             }
 
             $aDatos = json_decode($resultado, true); // Almacenamos el array devuelto por json_decode
-            return $aDatos; //devolvemos un array con los datos que queremos devolver
+             $aRespuesta["correcto"]= $aDatos[];
             
         }catch(Exception $excepcion){
-            $aRespuesta [0] = $excepcion -> getMessage(); //Asignamos a un array el mensaje de error de la excepcion
-            return $aRespuesta; // devolvemos el array con el mensaje de error
+            $aRespuesta ["incorrecto"] = $excepcion -> getMessage(); //Asignamos a un array el mensaje de error de la excepcion
+            
         }       
     }
     
     public static function getElephant($sexo) {    
+        $aRespuestas=[ //creamos un array con posición para guardar respuesta de Datos o respuesta de exception
+            "correcto" => null,
+            "incorrecto" => null
+        ];
+        
+        $aRespuesta["correcto"]= $aDatos[$posicion];
         try{
             $resultado = file_get_contents("https://elephant-api.herokuapp.com/elephants/sex/$sexo", true); // obtenemos el resultado del servidor del api rest
             
@@ -32,14 +43,20 @@ class REST{
            $posicion=array_rand($aDatos); //el metodo rand nos devuelve una posicion aleatoria del array
             
            //var_dump($aDatos[$posicion]);
+           
+           
               
-           return $aDatos[$posicion];//devolvemos una posicion aleatoria del array $aDatos
+           $aRespuesta["correcto"]= $aDatos[$posicion]; //guardamos la respuseta en la posicion correcta
+           
+          
 
             
         }catch(Exception $excepcion){
-            $aRespuesta [0] = $excepcion -> getMessage(); //Asignamos a un array el mensaje de error de la excepcion
-            return $aRespuesta; // devolvemos el array con el mensaje de error
-        }       
+            $aRespuesta ["incorrecto"] = $excepcion -> getMessage(); //Asignamos a la posicion incorrecto el mensaje de error
+            
+        }  
+        
+        return $aRespuesta; //devolvemos el array respuesta
     }   
 
 }
