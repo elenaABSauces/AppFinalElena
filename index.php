@@ -1,16 +1,12 @@
-<?php 
-
-require_once 'config/config.php';
-require_once 'config/configDB.php';
-
-
-session_start(); // Iniciamos una sesion o recuperamos la sesion anterior
-
-if(isset($_SESSION['usuarioDAW216DBProyectoFinal'])){ // Si el usuario ha iniciado sesion
-    require_once $_SESSION['paginaEnCurso']; // Incluimos el controlador la pagina en curso
-} else if (isset($_SESSION['paginaEnCursoSinRegistro'])){ // Si el usuario no ha iniciado sesion y a solicitado una pagina en curso sin registro
-    require_once $_SESSION['paginaEnCursoSinRegistro']; // Incluimos el controlador de la pagina en curso sin registro
-}else{ // Si el usuario no se ha identificado y no ha solicitado ninguna pagina en curso sin registro por defecto cargaremos el login
-    require_once $controladores['principal']; // Incluimos el controlador del login
-}
+<?php
+require_once 'config/config.php';// incluye el fichero de configuracion de la aplicacion 
+require_once 'config/configDB.php'; // incluye el fichero de configuracion de la base de datos
+session_start(); // inicia una sesion o recupera una anterior
+    if(isset($_SESSION['usuarioDAW216DBProyectoFinal'])){ // si se ha iniciado sesion
+        require_once $_SESSION['paginaEnCurso']; // incluye el controlador de la pagina en curso
+    } else if (isset($_SESSION['paginaEnCursoSinRegistro'])){ // si no se ha iniciado sesion pero esta inicializada la variable de sesion 'paginaEnCursoSinRegistro'
+        require_once $_SESSION['paginaEnCursoSinRegistro']; // incluye el controlador de la pagina en curso de usuarios sin registrar
+    }else{
+        require_once $controladores['principal']; // incluye el controlador del login
+    }
 ?>

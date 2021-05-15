@@ -6,7 +6,7 @@
  * 
  * @author Cristina Nuñez y Javier Nieto
  * @since 1.0
- * @copyright 2020-2021 Cristina Nuñez y Javier Nieto
+ * @copyright 16-01-2021
  * @version 1.0
  */
 
@@ -21,7 +21,7 @@ class DBPDO {
  * @param array $parametros parametros que necesita la consulta
  * @return null|PDOStatement resultado que devolverá la consulta
  */
-    public static function ejecutarConsulta($sentenciaSQL, $parametros) {
+    public static function ejecutaConsulta($sentenciaSQL, $parametros) {
         try {
             $miDB = new PDO(DNS, USER, PASSWORD);
             $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

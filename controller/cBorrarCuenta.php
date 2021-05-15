@@ -10,7 +10,7 @@ if(isset($_REQUEST['Cancelar'])){
 
 
 //Creación del objeto usuarioActual con los datos almacenados en la sesión
-$oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
+$oUsuarioActual = $_SESSION['usuarioDAW216DBProyectoFinal'];
 //Variables que almacenan los datos del usuario
 $codUsuario = $oUsuarioActual->getCodUsuario();
 $descUsuario = $oUsuarioActual->getDescUsuario();
@@ -29,4 +29,4 @@ if(isset($_REQUEST['Aceptar'])){
 $vistaEnCurso = $vistas['borrarCuenta']; 
 
 require_once $vistas['layout'];
-?> once $vistas['layout'];
+?> 

@@ -1,9 +1,8 @@
 <?php
-
 class REST{    
     
      public static function sevicioAPOD($fecha) {    
-        $aRespuestas=[ //creamos un array con posici贸n para guardar respuesta de Datos o respuesta de exception
+        $aRespuestas=[ //creamos un array con posici髇 para guardar respuesta de Datos o respuesta de exception
             "correcto" => null,
             "incorrecto" => null
         ];
@@ -13,7 +12,7 @@ class REST{
             $resultado = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=$fecha", true); // obtenemos el resultado del servidor del api rest
             
             if($resultado == false){ // si no obtenemos el resultado esperado
-                throw new Exception("Error en la conexi贸n con el servidor, vuelva a intentarlo mas tarde"); //Lanzamos una excepcion
+                throw new Exception("Error en la conexi髇 con el servidor, vuelva a intentarlo mas tarde"); //Lanzamos una excepcion
             }
 
             $aDatos = json_decode($resultado, true); // Almacenamos el array devuelto por json_decode
@@ -28,7 +27,7 @@ class REST{
     }
     
     public static function getElephant($sexo) {    
-        $aRespuestas=[ //creamos un array con posici贸n para guardar respuesta de Datos o respuesta de exception
+        $aRespuestas=[ //creamos un array con posici髇 para guardar respuesta de Datos o respuesta de exception
             "correcto" => null,
             "incorrecto" => null
         ];
@@ -37,7 +36,7 @@ class REST{
             $resultado = file_get_contents("https://elephant-api.herokuapp.com/elephants/sex/$sexo", true); // obtenemos el resultado del servidor del api rest
             
             if($resultado == false){ // si no obtenemos el resultado esperado
-                throw new Exception("Error en la conexi贸n con el servidor, vuelva a intentarlo mas tarde"); //Lanzamos una excepcion
+                throw new Exception("Error en la conexi髇 con el servidor, vuelva a intentarlo mas tarde"); //Lanzamos una excepcion
             }
 
             $aDatos = json_decode($resultado, true); // Almacenamos el array devuelto por json_decode

@@ -2,9 +2,9 @@
 $_SESSION['paginaAnterior'] = $controladores['mtoDepartamentos'];
 $_SESSION['CriterioBusqueda'] = "Todos";
 
-//Si se ha pulsado el bot贸n de Cerrar Sesi贸n
+//Si se ha pulsado el bot髇 de Cerrar Sesi髇
 if (isset($_REQUEST['cerrarSesion'])) {
-    //Destruye todos los datos asociados a la sesi贸n
+    //Destruye todos los datos asociados a la sesi髇
     session_destroy();
     //Redirige al login.php
     header("Location: index.php"); 
@@ -23,9 +23,9 @@ if(isset($_REQUEST['mtoDepartamentos'])){
     exit;
 }
 
-//Si se ha pulsado el bot贸n de detalle
+//Si se ha pulsado el bot髇 de detalle
 if (isset($_REQUEST['detalle'])) {
-    //Guardamos en la variable de sesi贸n 'pagina' la ruta del controlador del registro
+    //Guardamos en la variable de sesi髇 'pagina' la ruta del controlador del registro
     $_SESSION['paginaEnCurso'] = $controladores['detalle']; 
     header('Location: index.php');
     exit;
@@ -33,7 +33,7 @@ if (isset($_REQUEST['detalle'])) {
 
 
 if (isset($_REQUEST['volver'])) {
-    //Guardamos en la variable de sesi贸n 'pagina' la ruta del controlador del login
+    //Guardamos en la variable de sesi髇 'pagina' la ruta del controlador del login
     $_SESSION['paginaEnCurso'] = $controladores['inicio'];
     header('Location: index.php');
     exit;

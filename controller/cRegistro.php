@@ -71,3 +71,4 @@ if ($entradaOK) {
 $vistaEnCurso = $vistas['registro']; 
 
 require_once $vistas['layout'];
+?> 

@@ -19,6 +19,7 @@ if (isset($_REQUEST['Registrarse'])) {
     exit;
 }
 
+
 //Comprueba que el usuario le ha dado al botón de IniciarSesion y valida la entrada de todos los campos
 if (isset($_REQUEST["IniciarSesion"])) { 
     $aErrores['CodUsuario'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['CodUsuario'], 15, 3, OBLIGATORIO);
@@ -47,7 +48,7 @@ if ($entradaOK) {
     
     $_SESSION['fechaHoraUltimaConexionAnterior'] = $oUsuario ->getFechaHoraUltimaConexion();
     $oUsuario = UsuarioPDO::registrarUltimaConexion($oUsuario ->getCodUsuario());
-    $_SESSION['usuarioDAW216ProyectoFinal'] = $oUsuario;
+    $_SESSION['usuarioDAW216DBProyectoFinal'] = $oUsuario;
     //Guardamos en la variable de sesión 'pagina' la ruta del controlador del inicio
     $_SESSION['paginaEnCurso'] = $controladores['inicio']; 
      //Redirige al index.php

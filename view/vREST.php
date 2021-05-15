@@ -54,9 +54,9 @@
                         <p>Nombre: <?php echo $aElefante["correcto"]["name"] ?></p>
                         <p>Fecha Nacimiento: <?php echo $aElefante["correcto"]["dob"] ?></p>
                         <p>Especie: <?php echo $aElefante["correcto"]["species"] ?></p>
-                        <p><a href="<?php echo $aElefante["correcto"]["wikilink"] ?>" target="_blank">Link con m√°s informacion:</a><p>
-                        <p>Informaci√≥n: <?php echo $aElefante["correcto"]["note"] ?></p>
-                        <a href="https://elephant-api.herokuapp.com/" target="_blank">Documentaci√≥n del servicio Elefante</a><!-- comment --><!-- comment -->
+                        <p><a href="<?php echo $aElefante["correcto"]["wikilink"] ?>" target="_blank">Link con m·s informacion:</a><p>
+                        <p>InformaciÛn: <?php echo $aElefante["correcto"]["note"] ?></p>
+                        <a href="https://elephant-api.herokuapp.com/" target="_blank">DocumentaciÛn del servicio Elefante</a><!-- comment --><!-- comment -->
                      <?php
                        } else {
                      ?>

@@ -8,7 +8,7 @@
                  <input type="text" name="CodUsuario" value="<?php if($aErrores['CodUsuario'] == NULL && isset($_REQUEST['CodUsuario'])){ echo $_REQUEST['CodUsuario'];}?>">
                 <br><br>
 
-                <label for="Password">ContraseÃ±a</label>
+                <label for="Password">Contraseña</label>
                 <input type = "Password"  name = "Password" value="<?php if($aErrores['Password'] == NULL && isset($_REQUEST['Password'])){ echo $_REQUEST['Password'];}?>">
                 <br><br>
             </div>
