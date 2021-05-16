@@ -7,6 +7,8 @@ if(isset($_REQUEST['Volver'])){
     exit;
 }
 
+$errorCode = http_response_code();
+
 //Guardamos en la variable vistaEnCurso la vista que queremos implementar
 $vistaEnCurso = $error['error'];
 require_once $error['layout'];

@@ -32,7 +32,7 @@ class UsuarioPDO{
         //Encripta el password pasado como parámetro
         $passwordEncriptado=hash("sha256", ($codUsuario.$password));
         //Guardo en la variable resultadoConsulta el resultado de la consulta con los parámetros pasados
-        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, [$codUsuario,$passwordEncriptado]); 
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$codUsuario,$passwordEncriptado]); 
         
         //Si la consulta me devuelve algún resultado lo guardo en una variable para instanciar un nuevo objeto Usuario con esos datos
         if($resultadoConsulta->rowCount()>0){ 
@@ -61,7 +61,7 @@ class UsuarioPDO{
         $sentenciaSQL = "Insert into T01_Usuario (T01_CodUsuario, T01_DescUsuario, T01_Password , T01_NumConexiones, T01_FechaHoraUltimaConexion) values (?,?,?,1,?)";
         //Encripta el password pasado como parámetro
         $passwordEncriptado=hash("sha256", ($codUsuario.$password));
-        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, [$codUsuario, $descUsuario, $passwordEncriptado,  time()]);
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$codUsuario, $descUsuario, $passwordEncriptado,  time()]);
 
         if($resultadoConsulta){
             $oUsuario = self::buscarUsuarioPorCod($codUsuario);
@@ -84,7 +84,7 @@ class UsuarioPDO{
         $oUsuario = null;
 
         $sentenciaSQLActualizacionFechaConexion = "Update T01_Usuario set T01_NumConexiones = T01_NumConexiones+1, T01_FechaHoraUltimaConexion=? where T01_CodUsuario=?";
-        $resultadoActualizacionFechaConexion = DBPDO::ejecutaConsulta($sentenciaSQLActualizacionFechaConexion, [time(),$codUsuario]);
+        $resultadoActualizacionFechaConexion = DBPDO::ejecutarConsulta($sentenciaSQLActualizacionFechaConexion, [time(),$codUsuario]);
         
         if($resultadoActualizacionFechaConexion){
             $oUsuario = self::buscarUsuarioPorCod($codUsuario);
@@ -117,7 +117,7 @@ class UsuarioPDO{
             $parametros = [$descUsuario, $codUsuario];
         }
         
-        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, $parametros); 
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, $parametros); 
         
         if($resultadoConsulta){
             $oUsuario = self::buscarUsuarioPorCod($codUsuario);
@@ -143,7 +143,7 @@ class UsuarioPDO{
         $sentenciaSQL = "Update T01_Usuario set T01_Password=? where T01_CodUsuario=?";
         //Encripta el password pasado como parametro
         $passwordEncriptado = hash("sha256", $codUsuario.$passwordNueva);
-        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, [$passwordEncriptado,$codUsuario]);
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$passwordEncriptado,$codUsuario]);
 
         if($resultadoConsulta){
             $oUsuario = self::buscarUsuarioPorCod($codUsuario);
@@ -166,7 +166,7 @@ class UsuarioPDO{
         $usuarioEliminado = false; 
 
         $sentenciaSQL = "Delete from T01_Usuario where T01_CodUsuario=?";
-        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, [$codUsuario]);
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$codUsuario]);
 
         // Si se ha realizado la consulta correctamente cambiamos el valor de $usuarioEliminado a true
         if($resultadoConsulta){ 
@@ -191,7 +191,7 @@ class UsuarioPDO{
         
         //Comprueba que el usuario introducido existe en la base de datos
         $sentenciaSQL = "Select * from T01_Usuario where T01_CodUsuario=?";
-        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, [$codUsuario]);
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$codUsuario]);
         
         //Si la consulta me devuelve algun resultado cambiamos el valor de $usuarioNoExiste a false
         if($resultadoConsulta->rowCount()>0){ 
@@ -215,7 +215,7 @@ class UsuarioPDO{
         $oUsuario = null; 
 
         $sentenciaSQLDatosUsuario = "Select * from T01_Usuario where T01_CodUsuario=?";
-        $resultadoDatosUsuario = DBPDO::ejecutaConsulta($sentenciaSQLDatosUsuario, [$codUsuario]);
+        $resultadoDatosUsuario = DBPDO::ejecutarConsulta($sentenciaSQLDatosUsuario, [$codUsuario]);
         
         //Si la consulta me devuelve algún resultado lo guardo en una variable para instanciar un nuevo objeto Usuario con esos datos
         if($resultadoDatosUsuario->rowCount()>0){

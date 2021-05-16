@@ -59,7 +59,7 @@ if ($entradaOK) {
     //Creamos la fecha y hora de la última conexión anterior
     $_SESSION['fechaHoraUltimaConexionAnterior'] = null;
     //Guarda en la sesión el objeto usuario
-    $_SESSION['usuarioDAW216DBProyectoFinal'] = $oUsuario;
+    $_SESSION['usuarioDAW216AplicacionFinal'] = $oUsuario;
     //Guardamos en la variable de sesión 'pagina' la ruta del controlador del inicio
     $_SESSION['paginaEnCurso'] = $controladores['inicio']; 
     //Redirige al index.php

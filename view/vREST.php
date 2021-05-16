@@ -1,12 +1,7 @@
 <main class="mainRest">
-    <div id="inicio">
-        <h1>Rest</h1>
-        <div id="formulario-rest">
-               <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button type="submit" name='volver'>Volver</button>
-    </form>
+    <div id="rest">
             <div id="inasa">
-                <p>APOD: Astronomy Picture of the Day</p>
+                <h2>APOD: Astronomy Picture of the Day</h2>
                 <form name="nasa" id="nasa" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <p>
                         <label for="fecha">Elige una fecha para ver la imagen:</label>
@@ -30,7 +25,7 @@
                     <?php
                 }
                 ?>
-                
+  
             </div>
             <br>
             <br>
@@ -54,9 +49,9 @@
                         <p>Nombre: <?php echo $aElefante["correcto"]["name"] ?></p>
                         <p>Fecha Nacimiento: <?php echo $aElefante["correcto"]["dob"] ?></p>
                         <p>Especie: <?php echo $aElefante["correcto"]["species"] ?></p>
-                        <p><a href="<?php echo $aElefante["correcto"]["wikilink"] ?>" target="_blank">Link con m�s informacion:</a><p>
-                        <p>Informaci�n: <?php echo $aElefante["correcto"]["note"] ?></p>
-                        <a href="https://elephant-api.herokuapp.com/" target="_blank">Documentaci�n del servicio Elefante</a><!-- comment --><!-- comment -->
+                        <p><a href="<?php echo $aElefante["correcto"]["wikilink"] ?>" target="_blank">Link con más información:</a><p>
+                        <p>Información: <?php echo $aElefante["correcto"]["note"] ?></p>
+                        <a href="https://elephant-api.herokuapp.com/" target="_blank">Documentación del servicio Elefante</a><!-- comment --><!-- comment -->
                      <?php
                        } else {
                      ?>

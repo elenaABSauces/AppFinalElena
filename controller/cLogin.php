@@ -18,6 +18,12 @@ if (isset($_REQUEST['Registrarse'])) {
     header('Location: index.php');
     exit;
 }
+if (isset($_REQUEST['volver'])) {
+    //Guardamos en la variable de sesión 'pagina' la ruta del controlador del login
+    $_SESSION['paginaEnCurso'] = $controladores['principal'];
+    header('Location: index.php');
+    exit;
+}
 
 
 //Comprueba que el usuario le ha dado al botón de IniciarSesion y valida la entrada de todos los campos
@@ -48,7 +54,7 @@ if ($entradaOK) {
     
     $_SESSION['fechaHoraUltimaConexionAnterior'] = $oUsuario ->getFechaHoraUltimaConexion();
     $oUsuario = UsuarioPDO::registrarUltimaConexion($oUsuario ->getCodUsuario());
-    $_SESSION['usuarioDAW216DBProyectoFinal'] = $oUsuario;
+    $_SESSION['usuarioDAW216AplicacionFinal'] = $oUsuario;
     //Guardamos en la variable de sesión 'pagina' la ruta del controlador del inicio
     $_SESSION['paginaEnCurso'] = $controladores['inicio']; 
      //Redirige al index.php

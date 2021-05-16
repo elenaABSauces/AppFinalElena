@@ -1,7 +1,7 @@
 <?php
 $_SESSION['paginaAnterior'] = $controladores['inicio'];
 //Si el usuario no ha iniciado sesión se le redirige al login.php
-if(!isset($_SESSION['usuarioDAW216DBProyectoFinal'])){ 
+if(!isset($_SESSION['usuarioDAW216AplicacionFinal'])){ 
     header('Location: index.php');
     exit;
 }
@@ -55,8 +55,11 @@ if(isset($_REQUEST['mtoDepartamentos'])){
     header('Location: index.php');
     exit;
 }
+//Si se ha pulsado volver
 
-$oUsuarioActual = $_SESSION['usuarioDAW216DBProyectoFinal'];
+
+
+$oUsuarioActual = $_SESSION['usuarioDAW216AplicacionFinal'];
 
 //Variables que almacenan los datos del usuario sacadas de la BBDD
 $numConexiones = $oUsuarioActual->getNumConexiones();

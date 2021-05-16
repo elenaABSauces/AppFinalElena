@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 /**
  * Class Departamento
  *
@@ -9,8 +10,9 @@
  * @copyright 2020-2021 Cristina Nuñez y Javier Nieto
  * @version 1.1
  */
-class Departamento {
-    
+class Departamento
+{
+
     /**
      * Codigo del departamento
      * 
@@ -45,8 +47,8 @@ class Departamento {
      * @var int 
      */
     private $fechaBajaDepartamento;
-    
-        
+
+
     /**
      * Metodo magico __construct()
      * 
@@ -58,7 +60,8 @@ class Departamento {
      * @param  float $volumenDeNegocio
      * @param  int $fechaBajaDepartamento
      */
-    function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenDeNegocio, $fechaBajaDepartamento=null) {
+    function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenDeNegocio, $fechaBajaDepartamento = null)
+    {
         $this->codDepartamento = $codDepartamento;
         $this->descDepartamento = $descDepartamento;
         $this->fechaCreacionDepartamento = $fechaCreacionDepartamento;
@@ -74,7 +77,8 @@ class Departamento {
      * @param mixed $atributo atributo del que queremos obtener el valor
      * @return mixed valor del atributo que hemos pasado com parametro
      */
-    function __get($atributo){
+    function __get($atributo)
+    {
         return $this->$atributo;
     }
 
@@ -86,8 +90,8 @@ class Departamento {
      * @param mixed $atributo atributo al cual queremos cambiarle el valor
      * @param mixed $nuevoValor nuevo valor que queremos para el atributo
      */
-    function __set($atributo, $nuevoValor){
+    function __set($atributo, $nuevoValor)
+    {
         $this->$atributo = $nuevoValor;
     }
 }
-?>

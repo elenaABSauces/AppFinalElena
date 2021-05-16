@@ -1,37 +1,40 @@
-<main class="mainEliminarDepartamento">
-    <div id="eliminarDepartamento">
-        <form name="formulario" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="form">
-            <h3>Eliminar Departamento</h3>
-            <br>
-            <h5><img src="webroot/media/images/atencion.png" width="15px">  Eliminarás este departamento de forma permanente</h5>
 
-            <br>
-            <div>
-                <label for="CodDepartamento">Código de departamento</label><br>
-                <input style="background-color: #f5f5f5;" class="codigoDep" type="text" id="CodDepartamento" name="CodDepartamento" readonly value="<?php echo $oDepartamento->codDepartamento; ?>">
-                <br><br>
+<main id="main-eliminarDepartamento">
+<article class="form-container">
+        <header>
+            <h2>Eliminar Departamento</h2>
+        </header>
+        <form id="form-eliminarDepartamento" name="form-consultarModificarDepartamento" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
-                <label for="DescDepartamento" >Descripción de departamento</label><br>
-                <input style="background-color: #f5f5f5;" class="campos" type="text" id="DescDepartamento" name="DescDepartamento" readonly value="<?php echo $oDepartamento->descDepartamento; ?>">
-                <br><br>
-
-                <label for="FechaCreacion">Fecha de creación</label><br>
-                <input style="background-color: #f5f5f5;" class="fechaDep" type="text" id="FechaCreacion" name="FechaCreacion" readonly value="<?php echo date('d/m/Y',$oDepartamento->fechaCreacionDepartamento); ?>">
-                <br><br>
-
-                <label for="FechaBaja">Fecha de baja</label><br>
-                <input style="background-color: #f5f5f5;" class="fechaDep" type="text" id="FechaBaja" name="FechaBaja" readonly value="<?php echo isset($oDepartamento->fechaBajaDepartamento) ? date('d/m/Y',$oDepartamento->fechaBajaDepartamento) : "null"; ?>">
-                <br><br>
-
-                <label for="VolumenNegocio">Volumen de negocio</label><br>
-                <input style="background-color: #f5f5f5;" class="vNegocio" type="text" id="VolumenNegocio" name="VolumenNegocio" readonly value="<?php echo $oDepartamento->volumenDeNegocio; ?>">
-                <br><br>
+            <div class="input-field-container">
+                <input type="text" id="CodDepartamento" name="CodDepartamento" value="<?php echo $oDepartamento->codDepartamento; ?>" readonly>
+                <label for="CodDepartamento">Codigo de Departamento</label>
             </div>
-            <div>
-                <input class="eliminar" type="submit" value="Aceptar" name="Aceptar">
-                <br>
-                <input class="enviar" type="submit" value="Cancelar" name="Cancelar">
+            <div class="input-field-container">
+                <input type="text" id="DescDepartamento" name="DescDepartamento" value="<?php echo $oDepartamento->descDepartamento; ?>" readonly>
+                <label for="DescDepartamento">Descripcion del Departamento</label>
             </div>
+            <div class="input-field-container">
+                <input type="text" id="FechaCreacion" name="FechaCreacion" value="<?php echo date('d/m/Y',$oDepartamento->fechaCreacionDepartamento); ?>" readonly>
+                <label for="fechaCreacion">Fecha Creacion</label>
+            </div>
+            <div class="input-field-container">
+                <input type="text" id="FechaBaja" name="FechaBaja" value="<?php echo empty($oDepartamento->fechaBajaDepartamento)?"NULL":date('d/m/Y',$oDepartamento->fechaBajaDepartamento);?>" readonly>
+                <label for="FechaBaja">Fecha Baja</label>
+            </div>
+            <div class="input-field-container">
+                <input type="text" id="VolumenNegocio" name="VolumenNegocio" value="<?php echo $oDepartamento->volumenDeNegocio; ?>" readonly>
+                <label for="VolumenNegocio">Volumen Negocio</label>
+            </div>
+            
+            <div>
+                <button class="form-button" type="submit" name="Aceptar">Aceptar</button>
+            </div>
+
         </form>
-    </div>
+
+        <form  id="form-buttons" action="<?php echo $_SERVER['PHP_SELF'] ?>" name="registro" method="post">
+            <button class="form-button" type="submit" name="Cancelar">Cancelar</button>
+        </form>
+    </article>
 </main>

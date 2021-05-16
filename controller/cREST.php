@@ -1,6 +1,6 @@
 <?php
 $_SESSION['paginaAnterior'] = $controladores['REST']; // se guarda la ruta del controlador actual en la variable de sesion 'paginaEncurso' 
-if(!isset($_SESSION['usuarioDAW216DBProyectoFinal'])){                // Si el usuario no se ha logueado
+if(!isset($_SESSION['usuarioDAW216AplicacionFinal'])){                // Si el usuario no se ha logueado
         header('Location: index.php');                                          //Recargamos el index
         exit;
     }

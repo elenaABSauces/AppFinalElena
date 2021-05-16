@@ -18,7 +18,7 @@ $aErrores = [
 ];
 
 //Creación del objeto usuarioActual con los datos almacenados en la sesión
-$oUsuarioActual = $_SESSION['usuarioDAW216DBProyectoFinal'];
+$oUsuarioActual = $_SESSION['usuarioDAW216AplicacionFinal'];
 
 //Variables que almacenan los datos del usuario
 $codUsuario = $oUsuarioActual->getCodUsuario();
