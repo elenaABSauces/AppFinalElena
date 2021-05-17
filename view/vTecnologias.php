@@ -30,7 +30,8 @@
 
 
     </section>
-    <form id="form-buttons" action="<?php echo $_SERVER['PHP_SELF'] ?>" name="tecnologias" method="post">
-        <button class="form-button" type="submit" name="Volver"> Volver</button>
+     <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <button class="volver" type="submit" name='volver'>Volver</button>
     </form>
+</div>
 </main>

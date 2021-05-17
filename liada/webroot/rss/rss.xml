@@ -1,0 +1,34 @@
+<rss version="2.0">
+    <channel>
+        <title><![CDATA[ Elena de Antón ]]></title>
+        <copyright> 2020-2021 Elena de Antón Todos los Derechos Reservados</copyright>
+        <link>http://daw215.ieslossauces.es/AppFinalElena/</link>
+        <description>Aplicacion final DWES Elena de Antón</description>
+        <language>es</language>
+        <lastBuildDate>Wed, 05 May 2021 20:00:00 GMT</lastBuildDate>
+
+        <item>
+            <title>Mto Departamentos </title>
+            <link> http://daw216.ieslossauces.es/AppFinalElena</link>
+            <description>Comienzo mantenimiento de departamentos </description>
+            <guid>http://daw216.ieslossauces.es/AppFinalElena/mtodepartamentos</guid>
+            <pubDate>Sun, 09 May 2021 20:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Servicios de REST</title>
+            <link> http://daw216.ieslossauces.es/AppFinalElena</link>
+            <description>Nueva funcionalidad, uso de servicios REST ajenos</description>
+            <guid>http://daw216.ieslossauces.es/AppFinalElena/REST</guid>
+            <pubDate>Sun, 09 May 2021 20:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Comienzo aplicación</title>
+            <link> http://daw216.ieslossauces.es/AppFinalElena</link>
+            <description>Inicio de sesion</description>
+            <guid>http://daw216.ieslossauces.es/AppFinalElena/login</guid>
+            <pubDate>Wed, 05 May 2021 20:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

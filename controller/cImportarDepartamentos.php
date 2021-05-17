@@ -43,6 +43,7 @@ if($entradaOK){
 
 
 $vistaEnCurso = $vistas['importarDepartamentos']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
+$h2="Importar departamentos";
 require_once $vistas['layout'];
 
 ?>

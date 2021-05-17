@@ -64,8 +64,10 @@ class DepartamentoPDO
 
         $sentenciaSQL = "Select * FROM T02_Departamento where T02_DescDepartamento LIKE '%' ? '%' " . (($filtroConsulta != null) ? $filtroConsulta : NULL) . " LIMIT " . (($numPaginaActual - 1) * $numMaxDepartamentos) . ',' . $numMaxDepartamentos;
         $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$descDepartamento]); // almacenamos en la variable $resultadoConsulta los departamentos obtenidos en la consulta
-
-        if ($resultadoConsulta->rowCount() > 0) { // si la consulta devuelve algun departamento
+        
+        $nDepartamentos = $resultadoConsulta->rowCount();
+        if ($nDepartamentos > 0) { // si la consulta devuelve algun departamento    
+            /*        
             $departamento = $resultadoConsulta->fetchObject(); // obtenemos el primer departmento de la consulta, lo almacenamos en la variable $departamento y avanzamos el puntero al siguiente departamento
             $numDepartamento = 0; // declaramos e inicializamos el numero del departamento del array equivalente a la posicion del array
 
@@ -76,7 +78,15 @@ class DepartamentoPDO
                 $numDepartamento++; // incrementamos el numero del departamento equivalente a la posicion el array
                 $departamento = $resultadoConsulta->fetchObject(); // almacenamos el siguiente departamento devuelto por la consulta y avanzamos el puntero al siguiente departamento
             }
+            */
+            for($pDepartamento = 0; $pDepartamento < $nDepartamentos; ++$pDepartamento) { //recorremos los departamentos devueltos por la consuelta
+                $departamento = $resultadoConsulta->fetchObject(); //obtenemos el primer registro que nos proporciona la consulta
+                $oDepartamento = new Departamento($departamento->T02_CodDepartamento, $departamento->T02_DescDepartamento, $departamento->T02_FechaCreacionDepartamento, $departamento->T02_VolumenNegocio, $departamento->T02_FechaBajaDepartamento);//creamos objeto dpt
+                $aDepartamentos[] = $oDepartamento; //almacenamos el objeto en un array para devolverlo en el return
+                     
+            }
         }
+
 
         $sentenciaSQLNumDepartamentos = "Select count(*) FROM T02_Departamento WHERE T02_DescDepartamento LIKE '%' ? '%' " . (($filtroConsulta != null) ? $filtroConsulta : NULL);
         $resultadoConsultaNumDepartamentos = DBPDO::ejecutarConsulta($sentenciaSQLNumDepartamentos, [$descDepartamento]); // almacenamos en la variable $resultadoConsultaNumDepartamentos el resultado devuelto por la consulta

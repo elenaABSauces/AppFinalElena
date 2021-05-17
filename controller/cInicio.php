@@ -36,13 +36,7 @@ if (isset($_REQUEST['editar'])) {
     header('Location: index.php');
     exit;
 }
-//Si se ha pulsado el botón Borrar Cuenta
-if (isset($_REQUEST['BorrarCuenta'])) {
-    //Guardamos en la variable de sesión 'pagina' la ruta del controlador del editor de contraseña
-    $_SESSION['paginaEnCurso'] = $controladores['borrarCuenta'];
-    header('Location: index.php');
-    exit;
-}
+
 
 if(isset($_REQUEST['rest'])){
     $_SESSION['paginaEnCurso'] = $controladores['rest']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del rest
@@ -55,7 +49,13 @@ if(isset($_REQUEST['mtoDepartamentos'])){
     header('Location: index.php');
     exit;
 }
-//Si se ha pulsado volver
+//Si se ha pulsado el botón Borrar Cuenta
+if (isset($_REQUEST['BorrarCuenta'])) {
+    //Guardamos en la variable de sesión 'pagina' la ruta del controlador del editor de contraseña
+    $_SESSION['paginaEnCurso'] = $controladores['borrarCuenta'];
+    header('Location: index.php');
+    exit;
+}
 
 
 
@@ -68,6 +68,7 @@ $ultimaConexionAnterior = $_SESSION['fechaHoraUltimaConexionAnterior'];
 $imagenUsuario = $oUsuarioActual->getImagenPerfil();
 
 //Guardamos en la variable vistaEnCurso la vista que queremos implementar
-$vistaEnCurso = $vistas['inicio']; 
+$vistaEnCurso = $vistas['inicio'];
+$h2="Inicio";
 require_once $vistas['layout'];
 ?>

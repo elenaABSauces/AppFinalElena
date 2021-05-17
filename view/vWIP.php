@@ -3,6 +3,6 @@
 <img src="webroot/images/WIP.png" alt="EN CONSTRUCCIÓN"/>
 
 <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
-    <button class="logout" type="submit" name='Volver'>Volver</button>
+    <button class="volver" type="submit" name='Volver'>Volver</button>
 </form>
 

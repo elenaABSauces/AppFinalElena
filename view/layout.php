@@ -19,9 +19,10 @@
                 if (isset($_SESSION['usuarioDAW216AplicacionFinal'])) {
                     ?>
                     <button class="botonNav" type="submit" name="mtoDepartamentos">Mto Departamentos</button>
-                    <button class="botonNav" type="submit" name="editarPerfil">Editar Perfil</button>
+                    <button class="botonNav" type="submit" name="editar">Editar Perfil</button>
                     <input class="botonNav" type="submit" value="Detalles" name="detalle" id="detalle">
                     <button class="botonNav" type="submit" name="rest">Rest</button>
+                    <button class="botonNav" type="submit"  name="wip">Tecnologías</button>
                     <button class="botonNav" type="submit" name="cerrarSesion">Cerrar Sesion</button>
                     <?php
                 } else {
@@ -30,10 +31,10 @@
                     <?php
                 }
                 ?>
-
             </form>
+            
         </nav>
-
+        <h2 class="h2"><?php echo $h2?></h2>
         <?php require_once $vistaEnCurso ?>
 
         <footer>
@@ -49,10 +50,8 @@
                         <td><a href="https://github.com/elenaABSauces/AppFinalElena" target="_blank">Github</a>  
                             <img src="webroot/media/images/Github.png" widht="20" height="20"></td>
                         <td>
-                        <td><a href="../webroot/rss/rss.xml" target="_blank"> <img id="icon-rss" src="../webroot/media/images/rss.svg" widht="20" height="20" ></a></td>
-                        <td class="tecboton"><form id="links" name="form-links" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-                        <button type="submit"  name="Tecnologias">Ver tecnologías y herramientas utilizadas</button></form></td> 
-                        <td> <a href="../docs/CV.pdf" target="_blank">CV</a></td>
+                        <td><a href="webroot/rss/rss.xml" target="_blank"> <img id="icon-rss" src="webroot/media/images/rss.svg" widht="20" height="20" ></a></td>
+                        <td> <a href="docs/cv.pdf" target="_blank">CV</a></td>
                     </tr>
                 </table>
             </form>

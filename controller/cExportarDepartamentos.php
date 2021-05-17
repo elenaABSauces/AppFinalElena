@@ -31,4 +31,5 @@ if ($entradaOK) {
 }
 
 $vistaEnCurso = $vistas['exportarDepartamentos']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
+$h2="Exportar departamentos";
 require_once $vistas['layout'];

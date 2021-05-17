@@ -45,7 +45,6 @@ $vistas = [
     "rest" => "view/vREST.php",
     "wip" => "view/vWIP.php",
     "error" => "view/vError.php",
-    "miCuenta" => "view/vMiCuenta.php",
     "mtoDepartamentos" => "view/vMtoDepartamentos.php",
     "altaDepartamento" => "view/vAltaDepartamento.php",
     "bajaLogicaDepartamento" => "view/vBajaLogicaDepartamento.php",

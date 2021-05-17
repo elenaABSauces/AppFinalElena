@@ -8,7 +8,7 @@
         <div>    
         <?php
             if(isset($_SESSION)){
-                foreach ($_SESSION as $key => $value) { echo "<b>$key </b> <br>"; }
+                foreach ($_SESSION as $key => $value) { echo "<b>$key </b>→ '$value' '<br>"; }
             }
         ?>
         </div>
@@ -66,6 +66,6 @@
         ?>
         </div>
     <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button type="submit" name='volver'>Volver</button>
+        <button class="volver" type="submit" name='volver'>Volver</button>
     </form>
 </div>

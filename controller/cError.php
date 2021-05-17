@@ -11,5 +11,6 @@ $errorCode = http_response_code();
 
 //Guardamos en la variable vistaEnCurso la vista que queremos implementar
 $vistaEnCurso = $error['error'];
+$h2="ERROR";
 require_once $error['layout'];
 ?>

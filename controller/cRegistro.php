@@ -69,6 +69,6 @@ if ($entradaOK) {
 
 //Guardamos en la variable vistaEnCurso la vista que queremos implementar
 $vistaEnCurso = $vistas['registro']; 
-
+$h2="Registro";
 require_once $vistas['layout'];
 ?> 

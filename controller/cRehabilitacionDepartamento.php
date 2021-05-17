@@ -20,6 +20,7 @@ if(isset($_REQUEST['Aceptar'])){
 
 
 $vistaEnCurso = $vistas['rehabilitacionDepartamento']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
+$h2="Rehabilitacion";
 require_once $vistas['layout'];
 
 

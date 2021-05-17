@@ -69,6 +69,6 @@ if($entradaOK){
 
 //Guardamos en la variable vistaEnCurso la vista que queremos implementar
 $vistaEnCurso = $vistas['cambiarPassword']; 
-
+$h2="Cambiar contraseña";
 require_once $vistas['layout'];
 ?> 

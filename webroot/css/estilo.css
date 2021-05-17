@@ -1,7 +1,7 @@
 @charset "UTF-8";
 * {
     font-family: Arial;
-    margin: 0%;
+    margin: 0;
 }
 .contenedorNav{
     align-content: center;
@@ -86,14 +86,14 @@
     -ms-flex-pack: distribute;
     justify-content: space-around;
     list-style: none;
-    color: red;
+    color: #9b0e0e;
     width: 20%;
     margin-left: 10%;
 }
 
 .navInicio .logoInicio #logo {
     font-weight: bold;
-    color:red;
+    color:#9b0e0e;
 }
 
 .navInicio .forNavInicio {
@@ -117,7 +117,7 @@
 }
 
 .navInicio .forNavInicio .botonNav:hover{
-    border-top: 2px solid red;
+    border-top: 2px solid #9b0e0e;
     padding:10px;
 }
 
@@ -166,7 +166,7 @@ main {
 
 #inicioSesion form .enviar {
 
-    background-color: red;
+    background-color: #9b0e0e;
     color: black;
 
     font-size: 15px;
@@ -174,14 +174,14 @@ main {
 
 .enviar {
 
-    background-color: red;
+    background-color:#9b0e0e;
     color: black;
 
     font-size: 15px;
 }
 
 #inicioSesion form .campos {
-    border: 1px solid red;
+    border: 1px solid #9b0e0e;
     font-size: 15px;
 }
 
@@ -207,23 +207,58 @@ main {
     align-items: center;
 
 }
+
+.mainRest #rest{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
 #inasa{
     font-size:15px;
-
-    flex:1;
+    width: 500px;
     
 }
 
 #elefante{
     font-size:15px;
+    width:500px;
+}  
+.h2{
+    background-color: black;
+    height: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color:red;
+    width: 100%;
+        padding-left: 70px;
+  }
+   .volver{
+    text-decoration: none;
+    padding: 40px;
+    font-family: arial;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 800;
+    font-size: 25px;
+    color: black;
+    background-color: #9b0e0e;
+  }
+  .volver:hover{
+    color: #9b0e0e;
+    background-color: #bc6355;
+    text-decoration: none;
+  }
 
-    flex:2;
-    
-
-}
 .h3detalle{
     padding: 6px;
-    background-color: #B9DCD3;
+    background-color: #D35D5D;
     border-radius: 50px 50px 50px 50px;
 }
 
@@ -240,12 +275,14 @@ footer {
     display: flex; 
     align-self: flex-end;
     text-decoration: none;
+    justify-content: space-around;
+    align-items: flex-start;
 
 }
 
 footer table tr td a {
     text-decoration: none;
-    color: #6B6B6E;
+    color:white;
     font-size: 15px;
     background-color: transparent;
      
@@ -355,7 +392,7 @@ footer table tr td .botonNav{
 
 #main-mtoDepartamentos #form-mtoDepartamentos-buscador .select-field-container select:focus {
     background-color: #dbdbdb;
-    border-color: red;
+    border-color: #9b0e0e;
 }
 
 #main-mtoDepartamentos #form-mtoDepartamentos-buscador .form-button {
