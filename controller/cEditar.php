@@ -7,6 +7,11 @@ if(isset($_REQUEST['Cancelar'])){
     header('Location: index.php');
     exit;
 }
+if(isset($_REQUEST['volver'])){ // Si el usuario ha pulsado el boton de volver
+    $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion paginaEnCurso la ruta del controlador del inicio
+    header('Location: index.php'); //Cargamos el index
+    exit;
+}
 //Si se ha pulsado el botón Cambiar contraseña
 if(isset($_REQUEST['CambiarPassword'])){
     //Guardamos en la variable de sesión 'pagina' la ruta del controlador del editor de contraseña
@@ -94,7 +99,8 @@ if($entradaOK){
 }
 
 //Guardamos en la variable vistaEnCurso la vista que queremos implementar
-$vistaEnCurso = $vistas['editar']; 
+$vistaEnCurso = $vistas['editar'];
+$h2="Editar perfil";
 require_once $vistas['layout'];
 ?> 
 

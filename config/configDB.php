@@ -5,8 +5,8 @@ define('DNS','mysql:host=192.168.1.216:3306;dbname=DAW216DBDepartamentos'); // D
 define('USER','usuarioDAW216DBProyectoFinal'); // Usuario administrador de la bsae de datos DAW216DBDepartamentos
 define('PASSWORD','P@ssw0rd'); // ContraseÃ±a de usuario administrador de la base de datos DAW216DBDepartamentos
 define('MAX_DEPARTAMENTOS_PAGINA',5); // numero maximo de departamentos por pagina
-
 */
+
 
 
 // Conexion con entorno de 1&1

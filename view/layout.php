@@ -34,7 +34,7 @@
             </form>
             
         </nav>
-        <h2 class="h2"><?php echo $h2?></h2>
+        <h2 class="titulo"><?php echo $h2?></h2>
         <?php require_once $vistaEnCurso ?>
 
         <footer>
