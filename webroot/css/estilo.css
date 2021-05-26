@@ -218,15 +218,14 @@ main {
 #inasa{
     font-size:15px;
     width: 500px;
-    
+
 }
 
 #elefante{
     font-size:15px;
     width:500px;
 }  
-
-.titulo{
+.h2{
     background-color: black;
     height: 5vh;
     display: -webkit-box;
@@ -237,9 +236,9 @@ main {
     align-items: center;
     color:red;
     width: 100%;
-        padding-left: 70px;
-  }
-   .volver{
+    padding-left: 70px;
+}
+.volver{
     text-decoration: none;
     padding: 40px;
     font-family: arial;
@@ -250,12 +249,12 @@ main {
     font-size: 25px;
     color: black;
     background-color: #9b0e0e;
-  }
-  .volver:hover{
+}
+.volver:hover{
     color: #9b0e0e;
     background-color: #bc6355;
     text-decoration: none;
-  }
+}
 
 .h3detalle{
     padding: 6px;
@@ -286,13 +285,13 @@ footer table tr td a {
     color:white;
     font-size: 15px;
     background-color: transparent;
-     
+
 }
 
 footer table tr td .botonNav{
     outline: none;
-  border: none;
-  background-color: transparent;
+    border: none;
+    background-color: transparent;
 }
 
 
@@ -1447,4 +1446,37 @@ footer table tr td .botonNav{
     font-size: 1.3rem;
     margin: 20px 0px 20px 0px;
     font-weight: bold;
+}
+
+#tecnologias{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size:30px;
+    display: flex;
+    align-content:space-between;
+    align-items:center;
+    justify-content:space-between;
+    padding:10%;
+}
+
+#editar{
+    padding:10%;
+    align-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
+
+#editar .form-button{
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    
 }

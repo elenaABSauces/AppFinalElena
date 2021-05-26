@@ -1,0 +1,5 @@
+-- BORRADO BASE DE DATOS DAW216DBDepartamentos
+DROP DATABASE DAW216DBDepartamentos;
+
+-- BORRADO USUARIO usuarioDAW216DBDepartamentos
+DROP USER DAW216DBDepartamentos;

@@ -88,9 +88,6 @@
                 <?php } ?>
             </div>
 
-            <div>
-                <button class="form-button" type="submit" name="Volver">Volver</button>
-            </div>
         </form>
         <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <button class="volver" type="submit" name='volver'>Volver</button>

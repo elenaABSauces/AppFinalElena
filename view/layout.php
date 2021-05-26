@@ -22,7 +22,7 @@
                     <button class="botonNav" type="submit" name="editar">Editar Perfil</button>
                     <input class="botonNav" type="submit" value="Detalles" name="detalle" id="detalle">
                     <button class="botonNav" type="submit" name="rest">Rest</button>
-                    <button class="botonNav" type="submit"  name="wip">Tecnologías</button>
+                    <button class="botonNav" type="submit"  name="tecnologias">Tecnologías</button>
                     <button class="botonNav" type="submit" name="cerrarSesion">Cerrar Sesion</button>
                     <?php
                 } else {
@@ -34,7 +34,7 @@
             </form>
             
         </nav>
-        <h2 class="titulo"><?php echo $h2?></h2>
+        <h2 class="h2"><?php echo $h2?></h2>
         <?php require_once $vistaEnCurso ?>
 
         <footer>

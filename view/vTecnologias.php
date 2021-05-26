@@ -1,37 +1,29 @@
-<main id="main-tecnologias">
-    <header>
-        <h2>Tecnologias Utilizadas</h2>
-    </header>
-    <section id="tecnologias-container">
+<main>
+ <div id="tecnologias">
     <article id="html5">
-        <img src="../webroot/css/images/html5.jpg" alt="">
+        <img src="./webroot/media/images/html5-logo.jpg" alt="" width = "120px">
         <p>HTML5</p>
     </article>
     <article id="css3">
-        <img src="../webroot/css/images/css.jpg" alt="">
+        <img src="./webroot/media/images/css.png" alt="" width = "120px">
         <p>CSS3</p>
     </article>
-    <article id="sass">
-        <img src="../webroot/css/images/sass.jpg" alt="">
-        <p>SASS</p>
-    </article>
     <article id="javascript">
-        <img src="../webroot/css/images/javascript.jpg" alt="">
+        <img src="./webroot/media/images/JavaScript.png" alt="" width = "120px">
         <p>JavaScript</p>
     </article>
     <article id="php">
-        <img src="../webroot/css/images/php.png" alt="">
+        <img src="./webroot/media/images/php.png" alt="" width = "120px">
         <p>PHP 7.4</p>
     </article>
     <article id="mysql">
-        <img src="../webroot/css/images/mysql.jpg" alt="">
+        <img src="./webroot/media/images/MySQL.png" alt="" width = "120px">
         <p>MySQL 8.0</p>
     </article>
 
-
-    </section>
+</div>
+    
      <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <button class="volver" type="submit" name='volver'>Volver</button>
     </form>
-</div>
 </main>

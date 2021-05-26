@@ -6,8 +6,6 @@ if(!isset($_SESSION['usuarioDAW216AplicacionFinal'])){
     exit;
 }
 
-//Si se ha pulsado el botón de Mto.Departamentos
-
 //Si se ha pulsado el botón Borrar Cuenta
 if (isset($_REQUEST['BorrarCuenta'])) {
     //Guardamos en la variable de sesión 'pagina' la ruta del controlador del editor de contraseña
@@ -15,8 +13,6 @@ if (isset($_REQUEST['BorrarCuenta'])) {
     header('Location: index.php');
     exit;
 }
-
-
 
 $oUsuarioActual = $_SESSION['usuarioDAW216AplicacionFinal'];
 
