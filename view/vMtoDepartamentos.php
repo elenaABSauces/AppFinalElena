@@ -17,7 +17,6 @@
             <button class="form-button" type="submit" name="Buscar">Buscar</button>
         </div>
     </form>
-
     <article id="container-departamentos">
         <form id="form-mtoDepartamentos" name="form-mtoDepartamentos" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <table id="table-departamentos">

@@ -138,22 +138,8 @@ main {
 }
 
 #inicio{
-        width: 50%;
-    height: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    
+    padding-top:5%;
+    padding-left:20%;
 }
 
 #inicioSesion {
@@ -1478,7 +1464,26 @@ footer table tr td .botonNav{
     justify-content:space-between;
     padding:10%;
 }
+#contraseña{
+    padding:10%;
+    align-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
 
+.form-button{
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
 #editar{
     padding:10%;
     align-content: center;

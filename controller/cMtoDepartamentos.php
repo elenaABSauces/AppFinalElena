@@ -2,7 +2,6 @@
 
 $oUsuarioActual = $_SESSION['usuarioDAW216AplicacionFinal']; // almacenamos en la variable el usuario actual
 
-
 if (isset($_REQUEST["InsertarDepartamento"])) {
     $_SESSION['codDepartamento'] = $_REQUEST["InsertarDepartamento"];
     $_SESSION['paginaEnCurso'] = $controladores['altaDepartamento']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login

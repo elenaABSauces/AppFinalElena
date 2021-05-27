@@ -1,6 +1,5 @@
-<h2>Cambiar Contraseña</h2>
 <form name="formularioCambiarPassword" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form">
-    <div>
+        <div id="contraseña">
         <label for="Password">Contraseña Actual</label><br>
         <input class="campos" type="password" id="Password" name="Password" value="<?php
         echo (isset($_REQUEST['Password'])) ? $_REQUEST['Password'] : null;
@@ -30,10 +29,8 @@
         echo ($aErrores['RepetirPassword'] != null) ? "<span style='color:#FF0000'>" . $aErrores['RepetirPassword'] . "</span>" : null;
         ?>
         <br>
-    </div>
-    <div>
-        <button class="logout" type="submit" name='Aceptar'>Aceptar</button>
-                <button class="logout" type="submit" name='Cancelar'>Cancelar</button>
+        <button class="form-button" type="submit" name='Aceptar'>Aceptar</button>
+        <button class="form-button" type="submit" name='Cancelar'>Cancelar</button>
     </div>
 </form>
 
