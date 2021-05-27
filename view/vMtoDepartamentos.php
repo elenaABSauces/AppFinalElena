@@ -13,11 +13,6 @@
                     <option value="baja" <?php echo ($criterioBusqueda == "baja") ? "selected" : null ?> > Baja </option>
                 </select>
         </div>
-        <div class="input-field-container">
-            <p>Busqueda por páginación: <p>
-                <input type="text" id="PagDepartamento" name="PagDepartamento"  value="EN CONSTRUCCIÓN"  optional>
-
-        </div>
         <div>
             <button class="form-button" type="submit" name="Buscar">Buscar</button>
         </div>

@@ -1,5 +1,5 @@
 <main>
-    <article class="inicio">
+    <article id="inicio">
         <div id=""imagenPerfil">
             <?php echo ($imagenUsuario != null) ? '<img id="fotoPerfil" src = "data:image/png;base64,' . base64_encode($imagenUsuario) . '" alt="Foto de perfil"/>' : "<img id='fotoPerfil'src='webroot/media/images/image_perfil.png' alt='imagen_perfil' />"; ?>
         </div>
